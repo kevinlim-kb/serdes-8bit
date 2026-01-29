@@ -1,0 +1,14 @@
+{
+  "DESIGN_NAME": "serdes_8bit",
+  "VERILOG_FILES": [
+    "/home/kevinlim/rtl/serdes/rtl_simulation/decoder_10b_8b.v",
+    "/home/kevinlim/rtl/serdes/rtl_simulation/encoder_8b_10b.v",
+    "/home/kevinlim/rtl/serdes/rtl_simulation/latch_8bit.v",
+    "/home/kevinlim/rtl/serdes/rtl_simulation/piso_10bit.v",
+    "/home/kevinlim/rtl/serdes/rtl_simulation/serdes_8bit.v",
+    "/home/kevinlim/rtl/serdes/rtl_simulation/serdes_controller.v",
+    "/home/kevinlim/rtl/serdes/rtl_simulation/sipo_10bit.v"
+  ],
+  "CLOCK_PERIOD": 10,
+  "CLOCK_PORT": "clk"
+}

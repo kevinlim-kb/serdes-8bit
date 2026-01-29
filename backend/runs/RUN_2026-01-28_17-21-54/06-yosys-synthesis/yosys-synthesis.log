@@ -1,0 +1,1993 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2024  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.46 (git sha1 e97731b9dda91fa5fa53ed87df7c34163ba59a41, clang++ 17.0.6 -fPIC -O3)
+Loaded SDC plugin
+
+1. Executing Liberty frontend: /home/kevinlim/.ciel/ciel/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+Imported 428 cell types from liberty file.
+[INFO] Using SDC file '/home/kevinlim/rtl/serdes/backend/runs/RUN_2026-01-28_17-21-54/06-yosys-synthesis/synthesis.abc.sdc' for ABC…
+
+2. Executing Verilog-2005 frontend: /home/kevinlim/rtl/serdes/rtl_simulation/decoder_10b_8b.v
+Parsing SystemVerilog input from `/home/kevinlim/rtl/serdes/rtl_simulation/decoder_10b_8b.v' to AST representation.
+Storing AST representation for module `$abstract\decoder_10b_8b'.
+Successfully finished Verilog frontend.
+
+3. Executing Verilog-2005 frontend: /home/kevinlim/rtl/serdes/rtl_simulation/encoder_8b_10b.v
+Parsing SystemVerilog input from `/home/kevinlim/rtl/serdes/rtl_simulation/encoder_8b_10b.v' to AST representation.
+Storing AST representation for module `$abstract\encoder_8b_10b'.
+Successfully finished Verilog frontend.
+
+4. Executing Verilog-2005 frontend: /home/kevinlim/rtl/serdes/rtl_simulation/latch_8bit.v
+Parsing SystemVerilog input from `/home/kevinlim/rtl/serdes/rtl_simulation/latch_8bit.v' to AST representation.
+Storing AST representation for module `$abstract\latch_8bit'.
+Successfully finished Verilog frontend.
+
+5. Executing Verilog-2005 frontend: /home/kevinlim/rtl/serdes/rtl_simulation/piso_10bit.v
+Parsing SystemVerilog input from `/home/kevinlim/rtl/serdes/rtl_simulation/piso_10bit.v' to AST representation.
+Storing AST representation for module `$abstract\piso_10bit'.
+Successfully finished Verilog frontend.
+
+6. Executing Verilog-2005 frontend: /home/kevinlim/rtl/serdes/rtl_simulation/serdes_8bit.v
+Parsing SystemVerilog input from `/home/kevinlim/rtl/serdes/rtl_simulation/serdes_8bit.v' to AST representation.
+Storing AST representation for module `$abstract\serdes_8bit'.
+Successfully finished Verilog frontend.
+
+7. Executing Verilog-2005 frontend: /home/kevinlim/rtl/serdes/rtl_simulation/serdes_controller.v
+Parsing SystemVerilog input from `/home/kevinlim/rtl/serdes/rtl_simulation/serdes_controller.v' to AST representation.
+Storing AST representation for module `$abstract\serdes_controller'.
+Successfully finished Verilog frontend.
+
+8. Executing Verilog-2005 frontend: /home/kevinlim/rtl/serdes/rtl_simulation/sipo_10bit.v
+Parsing SystemVerilog input from `/home/kevinlim/rtl/serdes/rtl_simulation/sipo_10bit.v' to AST representation.
+Storing AST representation for module `$abstract\sipo_10bit'.
+Successfully finished Verilog frontend.
+
+9. Executing HIERARCHY pass (managing design hierarchy).
+
+10. Executing AST frontend in derive mode using pre-parsed AST for module `\serdes_8bit'.
+Generating RTLIL representation for module `\serdes_8bit'.
+
+10.1. Analyzing design hierarchy..
+Top module:  \serdes_8bit
+
+10.2. Executing AST frontend in derive mode using pre-parsed AST for module `\serdes_controller'.
+Generating RTLIL representation for module `\serdes_controller'.
+
+10.3. Executing AST frontend in derive mode using pre-parsed AST for module `\decoder_10b_8b'.
+Generating RTLIL representation for module `\decoder_10b_8b'.
+
+10.4. Executing AST frontend in derive mode using pre-parsed AST for module `\sipo_10bit'.
+Generating RTLIL representation for module `\sipo_10bit'.
+
+10.5. Executing AST frontend in derive mode using pre-parsed AST for module `\piso_10bit'.
+Generating RTLIL representation for module `\piso_10bit'.
+
+10.6. Executing AST frontend in derive mode using pre-parsed AST for module `\encoder_8b_10b'.
+Generating RTLIL representation for module `\encoder_8b_10b'.
+
+10.7. Executing AST frontend in derive mode using pre-parsed AST for module `\latch_8bit'.
+Generating RTLIL representation for module `\latch_8bit'.
+
+10.8. Analyzing design hierarchy..
+Top module:  \serdes_8bit
+Used module:     \serdes_controller
+Used module:     \decoder_10b_8b
+Used module:     \sipo_10bit
+Used module:     \piso_10bit
+Used module:     \encoder_8b_10b
+Used module:     \latch_8bit
+
+10.9. Analyzing design hierarchy..
+Top module:  \serdes_8bit
+Used module:     \serdes_controller
+Used module:     \decoder_10b_8b
+Used module:     \sipo_10bit
+Used module:     \piso_10bit
+Used module:     \encoder_8b_10b
+Used module:     \latch_8bit
+Removing unused module `$abstract\sipo_10bit'.
+Removing unused module `$abstract\serdes_controller'.
+Removing unused module `$abstract\serdes_8bit'.
+Removing unused module `$abstract\piso_10bit'.
+Removing unused module `$abstract\latch_8bit'.
+Removing unused module `$abstract\encoder_8b_10b'.
+Removing unused module `$abstract\decoder_10b_8b'.
+Removed 7 unused modules.
+Renaming module serdes_8bit to serdes_8bit.
+
+11. Generating Graphviz representation of design.
+Writing dot description to `/home/kevinlim/rtl/serdes/backend/runs/RUN_2026-01-28_17-21-54/06-yosys-synthesis/hierarchy.dot'.
+Dumping module serdes_8bit to page 1.
+
+12. Executing TRIBUF pass.
+
+13. Executing HIERARCHY pass (managing design hierarchy).
+
+13.1. Analyzing design hierarchy..
+Top module:  \serdes_8bit
+Used module:     \serdes_controller
+Used module:     \decoder_10b_8b
+Used module:     \sipo_10bit
+Used module:     \piso_10bit
+Used module:     \encoder_8b_10b
+Used module:     \latch_8bit
+
+13.2. Analyzing design hierarchy..
+Top module:  \serdes_8bit
+Used module:     \serdes_controller
+Used module:     \decoder_10b_8b
+Used module:     \sipo_10bit
+Used module:     \piso_10bit
+Used module:     \encoder_8b_10b
+Used module:     \latch_8bit
+Removed 0 unused modules.
+
+14. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+15. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed 2 dead cases from process $proc$/home/kevinlim/rtl/serdes/rtl_simulation/encoder_8b_10b.v:14$22 in module encoder_8b_10b.
+Marked 4 switch rules as full_case in process $proc$/home/kevinlim/rtl/serdes/rtl_simulation/encoder_8b_10b.v:14$22 in module encoder_8b_10b.
+Marked 2 switch rules as full_case in process $proc$/home/kevinlim/rtl/serdes/rtl_simulation/piso_10bit.v:12$19 in module piso_10bit.
+Marked 2 switch rules as full_case in process $proc$/home/kevinlim/rtl/serdes/rtl_simulation/sipo_10bit.v:13$17 in module sipo_10bit.
+Marked 4 switch rules as full_case in process $proc$/home/kevinlim/rtl/serdes/rtl_simulation/decoder_10b_8b.v:15$15 in module decoder_10b_8b.
+Marked 4 switch rules as full_case in process $proc$/home/kevinlim/rtl/serdes/rtl_simulation/serdes_controller.v:36$5 in module serdes_controller.
+Marked 1 switch rules as full_case in process $proc$/home/kevinlim/rtl/serdes/rtl_simulation/serdes_controller.v:25$3 in module serdes_controller.
+Marked 1 switch rules as full_case in process $proc$/home/kevinlim/rtl/serdes/rtl_simulation/serdes_controller.v:15$1 in module serdes_controller.
+Marked 2 switch rules as full_case in process $proc$/home/kevinlim/rtl/serdes/rtl_simulation/latch_8bit.v:9$24 in module latch_8bit.
+Removed a total of 2 dead cases.
+
+16. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 3 redundant assignments.
+Promoted 4 assignments to connections.
+
+17. Executing PROC_INIT pass (extract init attributes).
+
+18. Executing PROC_ARST pass (detect async resets in processes).
+
+19. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 4 switches.
+<suppressed ~16 debug messages>
+
+20. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\encoder_8b_10b.$proc$/home/kevinlim/rtl/serdes/rtl_simulation/encoder_8b_10b.v:14$22'.
+     1/3: $0\temp_6b[5:0]
+     2/3: $0\temp_4b[3:0]
+     3/3: $0\data_10b_out[9:0]
+Creating decoders for process `\piso_10bit.$proc$/home/kevinlim/rtl/serdes/rtl_simulation/piso_10bit.v:12$19'.
+     1/2: $0\shift_reg[9:0]
+     2/2: $0\ser_out[0:0]
+Creating decoders for process `\sipo_10bit.$proc$/home/kevinlim/rtl/serdes/rtl_simulation/sipo_10bit.v:13$17'.
+     1/2: $0\shift_reg[9:0]
+     2/2: $0\par_out[9:0]
+Creating decoders for process `\decoder_10b_8b.$proc$/home/kevinlim/rtl/serdes/rtl_simulation/decoder_10b_8b.v:15$15'.
+     1/3: $0\temp_5b[4:0]
+     2/3: $0\temp_3b[2:0]
+     3/3: $0\data_8b_out[7:0]
+Creating decoders for process `\serdes_controller.$proc$/home/kevinlim/rtl/serdes/rtl_simulation/serdes_controller.v:36$5'.
+     1/7: $3\counter_next[3:0]
+     2/7: $4\q_next[2:0]
+     3/7: $2\counter_next[3:0]
+     4/7: $3\q_next[2:0]
+     5/7: $2\q_next[2:0]
+     6/7: $1\q_next[2:0]
+     7/7: $1\counter_next[3:0]
+Creating decoders for process `\serdes_controller.$proc$/home/kevinlim/rtl/serdes/rtl_simulation/serdes_controller.v:25$3'.
+     1/1: $0\counter[3:0]
+Creating decoders for process `\serdes_controller.$proc$/home/kevinlim/rtl/serdes/rtl_simulation/serdes_controller.v:15$1'.
+     1/1: $0\q[2:0]
+Creating decoders for process `\latch_8bit.$proc$/home/kevinlim/rtl/serdes/rtl_simulation/latch_8bit.v:9$24'.
+     1/4: $2\bus_net0[7:0]
+     2/4: $2\data_8b_out[7:0]
+     3/4: $1\bus_net0[7:0]
+     4/4: $1\data_8b_out[7:0]
+
+21. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `\serdes_controller.\q_next' from process `\serdes_controller.$proc$/home/kevinlim/rtl/serdes/rtl_simulation/serdes_controller.v:36$5'.
+No latch inferred for signal `\serdes_controller.\counter_next' from process `\serdes_controller.$proc$/home/kevinlim/rtl/serdes/rtl_simulation/serdes_controller.v:36$5'.
+No latch inferred for signal `\latch_8bit.\bus_net0' from process `\latch_8bit.$proc$/home/kevinlim/rtl/serdes/rtl_simulation/latch_8bit.v:9$24'.
+Latch inferred for signal `\latch_8bit.\data_8b_out' from process `\latch_8bit.$proc$/home/kevinlim/rtl/serdes/rtl_simulation/latch_8bit.v:9$24': $auto$proc_dlatch.cc:433:proc_dlatch$189
+
+22. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\encoder_8b_10b.\data_10b_out' using process `\encoder_8b_10b.$proc$/home/kevinlim/rtl/serdes/rtl_simulation/encoder_8b_10b.v:14$22'.
+  created $dff cell `$procdff$216' with positive edge clock.
+Creating register for signal `\encoder_8b_10b.\temp_4b' using process `\encoder_8b_10b.$proc$/home/kevinlim/rtl/serdes/rtl_simulation/encoder_8b_10b.v:14$22'.
+  created $dff cell `$procdff$217' with positive edge clock.
+Creating register for signal `\encoder_8b_10b.\temp_6b' using process `\encoder_8b_10b.$proc$/home/kevinlim/rtl/serdes/rtl_simulation/encoder_8b_10b.v:14$22'.
+  created $dff cell `$procdff$218' with positive edge clock.
+Creating register for signal `\piso_10bit.\ser_out' using process `\piso_10bit.$proc$/home/kevinlim/rtl/serdes/rtl_simulation/piso_10bit.v:12$19'.
+  created $dff cell `$procdff$219' with positive edge clock.
+Creating register for signal `\piso_10bit.\shift_reg' using process `\piso_10bit.$proc$/home/kevinlim/rtl/serdes/rtl_simulation/piso_10bit.v:12$19'.
+  created $dff cell `$procdff$220' with positive edge clock.
+Creating register for signal `\sipo_10bit.\par_out' using process `\sipo_10bit.$proc$/home/kevinlim/rtl/serdes/rtl_simulation/sipo_10bit.v:13$17'.
+  created $dff cell `$procdff$221' with positive edge clock.
+Creating register for signal `\sipo_10bit.\shift_reg' using process `\sipo_10bit.$proc$/home/kevinlim/rtl/serdes/rtl_simulation/sipo_10bit.v:13$17'.
+  created $dff cell `$procdff$222' with positive edge clock.
+Creating register for signal `\decoder_10b_8b.\data_8b_out' using process `\decoder_10b_8b.$proc$/home/kevinlim/rtl/serdes/rtl_simulation/decoder_10b_8b.v:15$15'.
+  created $dff cell `$procdff$223' with positive edge clock.
+Creating register for signal `\decoder_10b_8b.\temp_3b' using process `\decoder_10b_8b.$proc$/home/kevinlim/rtl/serdes/rtl_simulation/decoder_10b_8b.v:15$15'.
+  created $dff cell `$procdff$224' with positive edge clock.
+Creating register for signal `\decoder_10b_8b.\temp_5b' using process `\decoder_10b_8b.$proc$/home/kevinlim/rtl/serdes/rtl_simulation/decoder_10b_8b.v:15$15'.
+  created $dff cell `$procdff$225' with positive edge clock.
+Creating register for signal `\serdes_controller.\counter' using process `\serdes_controller.$proc$/home/kevinlim/rtl/serdes/rtl_simulation/serdes_controller.v:25$3'.
+  created $dff cell `$procdff$226' with positive edge clock.
+Creating register for signal `\serdes_controller.\q' using process `\serdes_controller.$proc$/home/kevinlim/rtl/serdes/rtl_simulation/serdes_controller.v:15$1'.
+  created $dff cell `$procdff$227' with positive edge clock.
+
+23. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+24. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 4 empty switches in `\encoder_8b_10b.$proc$/home/kevinlim/rtl/serdes/rtl_simulation/encoder_8b_10b.v:14$22'.
+Removing empty process `encoder_8b_10b.$proc$/home/kevinlim/rtl/serdes/rtl_simulation/encoder_8b_10b.v:14$22'.
+Found and cleaned up 2 empty switches in `\piso_10bit.$proc$/home/kevinlim/rtl/serdes/rtl_simulation/piso_10bit.v:12$19'.
+Removing empty process `piso_10bit.$proc$/home/kevinlim/rtl/serdes/rtl_simulation/piso_10bit.v:12$19'.
+Found and cleaned up 2 empty switches in `\sipo_10bit.$proc$/home/kevinlim/rtl/serdes/rtl_simulation/sipo_10bit.v:13$17'.
+Removing empty process `sipo_10bit.$proc$/home/kevinlim/rtl/serdes/rtl_simulation/sipo_10bit.v:13$17'.
+Found and cleaned up 4 empty switches in `\decoder_10b_8b.$proc$/home/kevinlim/rtl/serdes/rtl_simulation/decoder_10b_8b.v:15$15'.
+Removing empty process `decoder_10b_8b.$proc$/home/kevinlim/rtl/serdes/rtl_simulation/decoder_10b_8b.v:15$15'.
+Found and cleaned up 4 empty switches in `\serdes_controller.$proc$/home/kevinlim/rtl/serdes/rtl_simulation/serdes_controller.v:36$5'.
+Removing empty process `serdes_controller.$proc$/home/kevinlim/rtl/serdes/rtl_simulation/serdes_controller.v:36$5'.
+Found and cleaned up 1 empty switch in `\serdes_controller.$proc$/home/kevinlim/rtl/serdes/rtl_simulation/serdes_controller.v:25$3'.
+Removing empty process `serdes_controller.$proc$/home/kevinlim/rtl/serdes/rtl_simulation/serdes_controller.v:25$3'.
+Found and cleaned up 1 empty switch in `\serdes_controller.$proc$/home/kevinlim/rtl/serdes/rtl_simulation/serdes_controller.v:15$1'.
+Removing empty process `serdes_controller.$proc$/home/kevinlim/rtl/serdes/rtl_simulation/serdes_controller.v:15$1'.
+Found and cleaned up 2 empty switches in `\latch_8bit.$proc$/home/kevinlim/rtl/serdes/rtl_simulation/latch_8bit.v:9$24'.
+Removing empty process `latch_8bit.$proc$/home/kevinlim/rtl/serdes/rtl_simulation/latch_8bit.v:9$24'.
+Cleaned up 20 empty switches.
+
+25. Executing CHECK pass (checking for obvious problems).
+Checking module serdes_8bit...
+Checking module encoder_8b_10b...
+Checking module piso_10bit...
+Checking module sipo_10bit...
+Checking module decoder_10b_8b...
+Checking module serdes_controller...
+Checking module latch_8bit...
+Found and reported 0 problems.
+
+26. Executing OPT_EXPR pass (perform const folding).
+Optimizing module serdes_8bit.
+Optimizing module encoder_8b_10b.
+<suppressed ~3 debug messages>
+Optimizing module piso_10bit.
+<suppressed ~3 debug messages>
+Optimizing module sipo_10bit.
+<suppressed ~2 debug messages>
+Optimizing module decoder_10b_8b.
+<suppressed ~3 debug messages>
+Optimizing module serdes_controller.
+<suppressed ~7 debug messages>
+Optimizing module latch_8bit.
+<suppressed ~15 debug messages>
+
+27. Executing FLATTEN pass (flatten design).
+Deleting now unused module encoder_8b_10b.
+Deleting now unused module piso_10bit.
+Deleting now unused module sipo_10bit.
+Deleting now unused module decoder_10b_8b.
+Deleting now unused module serdes_controller.
+Deleting now unused module latch_8bit.
+<suppressed ~6 debug messages>
+
+28. Executing OPT_EXPR pass (perform const folding).
+Optimizing module serdes_8bit.
+
+29. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \serdes_8bit..
+Removed 11 unused cells and 92 unused wires.
+<suppressed ~14 debug messages>
+
+30. Executing OPT_EXPR pass (perform const folding).
+Optimizing module serdes_8bit.
+
+31. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\serdes_8bit'.
+<suppressed ~39 debug messages>
+Removed a total of 13 cells.
+
+32. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \serdes_8bit..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+    dead port 2/2 on $mux $flatten\controller_unit.$procmux$120.
+    dead port 2/2 on $mux $flatten\controller_unit.$procmux$129.
+    dead port 2/2 on $mux $flatten\controller_unit.$procmux$138.
+    dead port 2/2 on $mux $flatten\controller_unit.$procmux$149.
+    dead port 2/2 on $mux $flatten\controller_unit.$procmux$112.
+Removed 5 multiplexer ports.
+<suppressed ~13 debug messages>
+
+33. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \serdes_8bit.
+Performed a total of 0 changes.
+
+34. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\serdes_8bit'.
+<suppressed ~3 debug messages>
+Removed a total of 1 cells.
+
+35. Executing OPT_DFF pass (perform DFF optimizations).
+
+36. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \serdes_8bit..
+Removed 0 unused cells and 19 unused wires.
+<suppressed ~1 debug messages>
+
+37. Executing OPT_EXPR pass (perform const folding).
+Optimizing module serdes_8bit.
+
+38. Rerunning OPT passes. (Maybe there is more to do…)
+
+39. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \serdes_8bit..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~13 debug messages>
+
+40. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \serdes_8bit.
+    New ctrl vector for $pmux cell $flatten\controller_unit.$procmux$162: $auto$opt_reduce.cc:134:opt_pmux$235
+  Optimizing cells in module \serdes_8bit.
+Performed a total of 1 changes.
+
+41. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\serdes_8bit'.
+Removed a total of 0 cells.
+
+42. Executing OPT_DFF pass (perform DFF optimizations).
+
+43. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \serdes_8bit..
+
+44. Executing OPT_EXPR pass (perform const folding).
+Optimizing module serdes_8bit.
+
+45. Rerunning OPT passes. (Maybe there is more to do…)
+
+46. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \serdes_8bit..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~13 debug messages>
+
+47. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \serdes_8bit.
+Performed a total of 0 changes.
+
+48. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\serdes_8bit'.
+Removed a total of 0 cells.
+
+49. Executing OPT_DFF pass (perform DFF optimizations).
+
+50. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \serdes_8bit..
+
+51. Executing OPT_EXPR pass (perform const folding).
+Optimizing module serdes_8bit.
+
+52. Executing FSM pass (extract and optimize FSM).
+
+52.1. Executing FSM_DETECT pass (finding FSMs in design).
+Found FSM state register serdes_8bit.controller_unit.q.
+
+52.2. Executing FSM_EXTRACT pass (extracting FSM from design).
+Extracting FSM `\controller_unit.q' from module `\serdes_8bit'.
+  found $dff cell for state register: $flatten\controller_unit.$procdff$227
+  root of input selection tree: $flatten\controller_unit.$0\q[2:0]
+  found reset state: 3'000 (guessed from mux tree)
+  found ctrl input: \rst_n
+  found state code: 3'000
+  found ctrl input: $flatten\controller_unit.$procmux$154_CMP
+  found ctrl input: \controller_unit.sipo_en
+  found ctrl input: \controller_unit.load_en
+  found ctrl input: \controller_unit.ser_en
+  found ctrl input: \bus_free_flag
+  found state code: 3'101
+  found ctrl input: $flatten\controller_unit.$eq$/home/kevinlim/rtl/serdes/rtl_simulation/serdes_controller.v:40$6_Y
+  found state code: 3'011
+  found state code: 3'100
+  found state code: 3'010
+  found ctrl input: \data_en
+  found state code: 3'001
+  found ctrl output: $flatten\controller_unit.$procmux$154_CMP
+  found ctrl output: \controller_unit.par_en
+  found ctrl output: \controller_unit.sipo_en
+  found ctrl output: \controller_unit.load_en
+  found ctrl output: \controller_unit.ser_en
+  found ctrl output: \bus_free_flag
+  ctrl inputs: { $flatten\controller_unit.$eq$/home/kevinlim/rtl/serdes/rtl_simulation/serdes_controller.v:40$6_Y \data_en \rst_n }
+  ctrl outputs: { \controller_unit.ser_en \controller_unit.load_en \controller_unit.sipo_en \controller_unit.par_en $flatten\controller_unit.$0\q[2:0] $flatten\controller_unit.$procmux$154_CMP \bus_free_flag }
+  transition:      3'000 3'--0 ->      3'000 9'000000001
+  transition:      3'000 3'-01 ->      3'000 9'000000001
+  transition:      3'000 3'-11 ->      3'001 9'000000101
+  transition:      3'100 3'--0 ->      3'000 9'000000010
+  transition:      3'100 3'--1 ->      3'101 9'000010110
+  transition:      3'010 3'--0 ->      3'000 9'010000000
+  transition:      3'010 3'0-1 ->      3'010 9'010001000
+  transition:      3'010 3'1-1 ->      3'011 9'010001100
+  transition:      3'001 3'--0 ->      3'000 9'100000000
+  transition:      3'001 3'--1 ->      3'010 9'100001000
+  transition:      3'101 3'--0 ->      3'000 9'000100000
+  transition:      3'101 3'--1 ->      3'000 9'000100000
+  transition:      3'011 3'--0 ->      3'000 9'001000000
+  transition:      3'011 3'0-1 ->      3'011 9'001001100
+  transition:      3'011 3'1-1 ->      3'100 9'001010000
+
+52.3. Executing FSM_OPT pass (simple optimizations of FSMs).
+Optimizing FSM `$fsm$\controller_unit.q$236' from module `\serdes_8bit'.
+  Merging pattern 3'--0 and 3'--1 from group (4 0 9'000100000).
+  Merging pattern 3'--1 and 3'--0 from group (4 0 9'000100000).
+
+52.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \serdes_8bit..
+Removed 12 unused cells and 12 unused wires.
+<suppressed ~14 debug messages>
+
+52.5. Executing FSM_OPT pass (simple optimizations of FSMs).
+Optimizing FSM `$fsm$\controller_unit.q$236' from module `\serdes_8bit'.
+  Removing unused output signal $flatten\controller_unit.$procmux$154_CMP.
+  Removing unused output signal $flatten\controller_unit.$0\q[2:0] [0].
+  Removing unused output signal $flatten\controller_unit.$0\q[2:0] [1].
+  Removing unused output signal $flatten\controller_unit.$0\q[2:0] [2].
+
+52.6. Executing FSM_RECODE pass (re-assigning FSM state encoding).
+Recoding FSM `$fsm$\controller_unit.q$236' from module `\serdes_8bit' using `auto' encoding:
+  mapping auto encoding to `one-hot` for this FSM.
+  000 -> -----1
+  100 -> ----1-
+  010 -> ---1--
+  001 -> --1---
+  101 -> -1----
+  011 -> 1-----
+
+52.7. Executing FSM_INFO pass (dumping all available information on FSM cells).
+
+FSM `$fsm$\controller_unit.q$236' from module `serdes_8bit':
+-------------------------------------
+
+  Information on FSM $fsm$\controller_unit.q$236 (\controller_unit.q):
+
+  Number of input signals:    3
+  Number of output signals:   5
+  Number of state bits:       6
+
+  Input signals:
+    0: \rst_n
+    1: \data_en
+    2: $flatten\controller_unit.$eq$/home/kevinlim/rtl/serdes/rtl_simulation/serdes_controller.v:40$6_Y
+
+  Output signals:
+    0: \bus_free_flag
+    1: \controller_unit.par_en
+    2: \controller_unit.sipo_en
+    3: \controller_unit.load_en
+    4: \controller_unit.ser_en
+
+  State encoding:
+    0:   6'-----1  <RESET STATE>
+    1:   6'----1-
+    2:   6'---1--
+    3:   6'--1---
+    4:   6'-1----
+    5:   6'1-----
+
+  Transition Table (state_in, ctrl_in, state_out, ctrl_out):
+      0:     0 3'--0   ->     0 5'00001
+      1:     0 3'-01   ->     0 5'00001
+      2:     0 3'-11   ->     3 5'00001
+      3:     1 3'--0   ->     0 5'00000
+      4:     1 3'--1   ->     4 5'00000
+      5:     2 3'--0   ->     0 5'01000
+      6:     2 3'0-1   ->     2 5'01000
+      7:     2 3'1-1   ->     5 5'01000
+      8:     3 3'--0   ->     0 5'10000
+      9:     3 3'--1   ->     2 5'10000
+     10:     4 3'---   ->     0 5'00010
+     11:     5 3'--0   ->     0 5'00100
+     12:     5 3'1-1   ->     1 5'00100
+     13:     5 3'0-1   ->     5 5'00100
+
+-------------------------------------
+
+52.8. Executing FSM_MAP pass (mapping FSMs to basic logic).
+Mapping FSM `$fsm$\controller_unit.q$236' from module `\serdes_8bit'.
+
+53. Executing OPT_EXPR pass (perform const folding).
+Optimizing module serdes_8bit.
+<suppressed ~3 debug messages>
+
+54. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\serdes_8bit'.
+<suppressed ~6 debug messages>
+Removed a total of 2 cells.
+
+55. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \serdes_8bit..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~12 debug messages>
+
+56. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \serdes_8bit.
+Performed a total of 0 changes.
+
+57. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\serdes_8bit'.
+Removed a total of 0 cells.
+
+58. Executing OPT_DFF pass (perform DFF optimizations).
+Adding SRST signal on $flatten\serializer_u3.$procdff$220 ($dff) from module serdes_8bit (D = $flatten\serializer_u3.$procmux$63_Y [8:0], Q = \serializer_u3.shift_reg [8:0], rval = 9'000000000).
+Adding SRST signal on $flatten\serializer_u3.$procdff$220 ($dff) from module serdes_8bit (D = \serializer_u2.data_10b_out [9], Q = \serializer_u3.shift_reg [9], rval = 1'0).
+Adding EN signal on $flatten\serializer_u3.$procdff$219 ($dff) from module serdes_8bit (D = \serializer_u3.shift_reg [0], Q = \serializer_u3.ser_out).
+Adding SRST signal on $flatten\serializer_u2.$procdff$218 ($dff) from module serdes_8bit (D = $flatten\serializer_u2.$procmux$44_Y, Q = \serializer_u2.temp_6b, rval = 6'000000).
+Adding EN signal on $auto$ff.cc:266:slice$294 ($sdff) from module serdes_8bit (D = $flatten\serializer_u2.$auto$proc_rom.cc:154:do_switch$30, Q = \serializer_u2.temp_6b).
+Adding SRST signal on $flatten\serializer_u2.$procdff$217 ($dff) from module serdes_8bit (D = $flatten\serializer_u2.$procmux$51_Y, Q = \serializer_u2.temp_4b, rval = 4'0000).
+Adding EN signal on $auto$ff.cc:266:slice$296 ($sdff) from module serdes_8bit (D = $flatten\serializer_u2.$auto$proc_rom.cc:154:do_switch$26, Q = \serializer_u2.temp_4b).
+Adding EN signal on $flatten\serializer_u2.$procdff$216 ($dff) from module serdes_8bit (D = { \serializer_u2.temp_4b \serializer_u2.temp_6b }, Q = \serializer_u2.data_10b_out).
+Adding SRST signal on $flatten\deserializer_u2.$procdff$225 ($dff) from module serdes_8bit (D = $flatten\deserializer_u2.$procmux$88_Y, Q = \deserializer_u2.temp_5b, rval = 5'00000).
+Adding EN signal on $auto$ff.cc:266:slice$303 ($sdff) from module serdes_8bit (D = $flatten\deserializer_u2.$auto$proc_rom.cc:154:do_switch$38, Q = \deserializer_u2.temp_5b).
+Adding SRST signal on $flatten\deserializer_u2.$procdff$224 ($dff) from module serdes_8bit (D = $flatten\deserializer_u2.$procmux$95_Y, Q = \deserializer_u2.temp_3b, rval = 3'000).
+Adding EN signal on $auto$ff.cc:266:slice$305 ($sdff) from module serdes_8bit (D = $flatten\deserializer_u2.$auto$proc_rom.cc:154:do_switch$34, Q = \deserializer_u2.temp_3b).
+Adding EN signal on $flatten\deserializer_u2.$procdff$223 ($dff) from module serdes_8bit (D = { \deserializer_u2.temp_3b \deserializer_u2.temp_5b }, Q = \deserializer_u2.data_8b_out).
+Adding EN signal on $flatten\deserializer_u1.$procdff$222 ($dff) from module serdes_8bit (D = { \serializer_u3.ser_out \deserializer_u1.shift_reg [9:1] }, Q = \deserializer_u1.shift_reg).
+Adding SRST signal on $flatten\deserializer_u1.$procdff$221 ($dff) from module serdes_8bit (D = $flatten\deserializer_u1.$procmux$81_Y, Q = \deserializer_u1.par_out, rval = 10'0000000000).
+Adding EN signal on $auto$ff.cc:266:slice$315 ($sdff) from module serdes_8bit (D = \deserializer_u1.shift_reg, Q = \deserializer_u1.par_out).
+Adding SRST signal on $flatten\controller_unit.$procdff$226 ($dff) from module serdes_8bit (D = $flatten\controller_unit.$sub$/home/kevinlim/rtl/serdes/rtl_simulation/serdes_controller.v:46$7_Y [3:0], Q = \controller_unit.counter, rval = 4'1010).
+
+59. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \serdes_8bit..
+Removed 22 unused cells and 30 unused wires.
+<suppressed ~24 debug messages>
+
+60. Executing OPT_EXPR pass (perform const folding).
+Optimizing module serdes_8bit.
+
+61. Rerunning OPT passes. (Maybe there is more to do…)
+
+62. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \serdes_8bit..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~2 debug messages>
+
+63. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \serdes_8bit.
+Performed a total of 0 changes.
+
+64. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\serdes_8bit'.
+<suppressed ~3 debug messages>
+Removed a total of 1 cells.
+
+65. Executing OPT_DFF pass (perform DFF optimizations).
+
+66. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \serdes_8bit..
+Removed 0 unused cells and 1 unused wires.
+<suppressed ~1 debug messages>
+
+67. Executing OPT_EXPR pass (perform const folding).
+Optimizing module serdes_8bit.
+
+68. Rerunning OPT passes. (Maybe there is more to do…)
+
+69. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \serdes_8bit..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~2 debug messages>
+
+70. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \serdes_8bit.
+Performed a total of 0 changes.
+
+71. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\serdes_8bit'.
+Removed a total of 0 cells.
+
+72. Executing OPT_DFF pass (perform DFF optimizations).
+
+73. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \serdes_8bit..
+
+74. Executing OPT_EXPR pass (perform const folding).
+Optimizing module serdes_8bit.
+
+75. Executing WREDUCE pass (reducing word size of cells).
+Removed top 28 address bits (of 32) from memory init port serdes_8bit.$flatten\deserializer_u2.$auto$mem.cc:328:emit$37 ($flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$35).
+Removed top 26 address bits (of 32) from memory init port serdes_8bit.$flatten\deserializer_u2.$auto$mem.cc:328:emit$41 ($flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39).
+Removed top 29 address bits (of 32) from memory init port serdes_8bit.$flatten\serializer_u2.$auto$mem.cc:328:emit$29 ($flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$27).
+Removed top 27 address bits (of 32) from memory init port serdes_8bit.$flatten\serializer_u2.$auto$mem.cc:328:emit$33 ($flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31).
+Removed top 1 bits (of 10) from mux cell serdes_8bit.$flatten\serializer_u3.$procmux$63 ($mux).
+Removed top 1 bits (of 2) from port B of cell serdes_8bit.$auto$fsm_map.cc:77:implement_pattern_cache$251 ($eq).
+Removed top 1 bits (of 2) from port B of cell serdes_8bit.$auto$fsm_map.cc:77:implement_pattern_cache$277 ($eq).
+Removed top 31 bits (of 32) from port B of cell serdes_8bit.$flatten\controller_unit.$sub$/home/kevinlim/rtl/serdes/rtl_simulation/serdes_controller.v:46$7 ($sub).
+Removed top 28 bits (of 32) from port Y of cell serdes_8bit.$flatten\controller_unit.$sub$/home/kevinlim/rtl/serdes/rtl_simulation/serdes_controller.v:46$7 ($sub).
+Removed top 28 bits (of 32) from wire serdes_8bit.$flatten\controller_unit.$sub$/home/kevinlim/rtl/serdes/rtl_simulation/serdes_controller.v:46$7_Y.
+Removed top 1 bits (of 10) from wire serdes_8bit.$flatten\serializer_u3.$procmux$63_Y.
+
+76. Executing PEEPOPT pass (run peephole optimizers).
+
+77. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \serdes_8bit..
+Removed 0 unused cells and 2 unused wires.
+<suppressed ~1 debug messages>
+
+78. Executing ALUMACC pass (create $alu and $macc cells).
+Extracting $alu and $macc cells in module serdes_8bit:
+  creating $macc model for $flatten\controller_unit.$sub$/home/kevinlim/rtl/serdes/rtl_simulation/serdes_controller.v:46$7 ($sub).
+  creating $alu model for $macc $flatten\controller_unit.$sub$/home/kevinlim/rtl/serdes/rtl_simulation/serdes_controller.v:46$7.
+  creating $alu cell for $flatten\controller_unit.$sub$/home/kevinlim/rtl/serdes/rtl_simulation/serdes_controller.v:46$7: $auto$alumacc.cc:485:replace_alu$326
+  created 1 $alu and 0 $macc cells.
+
+79. Executing SHARE pass (SAT-based resource sharing).
+
+80. Executing OPT_EXPR pass (perform const folding).
+Optimizing module serdes_8bit.
+
+81. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\serdes_8bit'.
+Removed a total of 0 cells.
+
+82. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \serdes_8bit..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~2 debug messages>
+
+83. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \serdes_8bit.
+Performed a total of 0 changes.
+
+84. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\serdes_8bit'.
+Removed a total of 0 cells.
+
+85. Executing OPT_DFF pass (perform DFF optimizations).
+
+86. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \serdes_8bit..
+
+87. Executing OPT_EXPR pass (perform const folding).
+Optimizing module serdes_8bit.
+
+88. Executing MEMORY pass.
+
+88.1. Executing OPT_MEM pass (optimize memories).
+Performed a total of 0 transformations.
+
+88.2. Executing OPT_MEM_PRIORITY pass (removing unnecessary memory write priority relations).
+Performed a total of 0 transformations.
+
+88.3. Executing OPT_MEM_FEEDBACK pass (finding memory read-to-write feedback paths).
+
+88.4. Executing MEMORY_BMUX2ROM pass (converting muxes to ROMs).
+
+88.5. Executing MEMORY_DFF pass (merging $dff cells to $memrd).
+Checking read port `$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$35'[0] in module `\serdes_8bit': merging output FF to cell.
+Checking read port `$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39'[0] in module `\serdes_8bit': merging output FF to cell.
+Checking read port `$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$27'[0] in module `\serdes_8bit': merging output FF to cell.
+Checking read port `$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31'[0] in module `\serdes_8bit': merging output FF to cell.
+
+88.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \serdes_8bit..
+Removed 4 unused cells and 22 unused wires.
+<suppressed ~5 debug messages>
+
+88.7. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+
+88.8. Executing OPT_MEM_WIDEN pass (optimize memories where all ports are wide).
+Performed a total of 0 transformations.
+
+88.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \serdes_8bit..
+
+88.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+89. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \serdes_8bit..
+
+90. Executing OPT_EXPR pass (perform const folding).
+Optimizing module serdes_8bit.
+
+91. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\serdes_8bit'.
+<suppressed ~9 debug messages>
+Removed a total of 3 cells.
+
+92. Executing OPT_DFF pass (perform DFF optimizations).
+
+93. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \serdes_8bit..
+Removed 0 unused cells and 3 unused wires.
+<suppressed ~1 debug messages>
+
+94. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+Mapping memory $flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$35 in module \serdes_8bit:
+  created 16 $dff cells and 0 static cells of width 3.
+Extracted data FF from read port 0 of serdes_8bit.$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$35: $$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$35$rdreg[0]
+  read interface: 1 $dff and 15 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39 in module \serdes_8bit:
+  created 64 $dff cells and 0 static cells of width 5.
+Extracted data FF from read port 0 of serdes_8bit.$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39: $$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdreg[0]
+  read interface: 1 $dff and 63 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$27 in module \serdes_8bit:
+  created 8 $dff cells and 0 static cells of width 4.
+Extracted data FF from read port 0 of serdes_8bit.$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$27: $$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$27$rdreg[0]
+  read interface: 1 $dff and 7 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31 in module \serdes_8bit:
+  created 32 $dff cells and 0 static cells of width 6.
+Extracted data FF from read port 0 of serdes_8bit.$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31: $$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdreg[0]
+  read interface: 1 $dff and 31 $mux cells.
+  write interface: 0 write mux blocks.
+
+95. Executing OPT_EXPR pass (perform const folding).
+Optimizing module serdes_8bit.
+<suppressed ~20 debug messages>
+
+96. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\serdes_8bit'.
+Removed a total of 0 cells.
+
+97. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \serdes_8bit..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~6 debug messages>
+
+98. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \serdes_8bit.
+    Consolidated identical input bits for $mux cell $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$27$rdmux[0][2][2]$608:
+      Old ports: A=4'0010, B=4'1010, Y=$memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$27$rdmux[0][1][1]$a$600
+      New ports: A=1'0, B=1'1, Y=$memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$27$rdmux[0][1][1]$a$600 [3]
+      New connections: $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$27$rdmux[0][1][1]$a$600 [2:0] = 3'010
+    Consolidated identical input bits for $mux cell $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$27$rdmux[0][2][1]$605:
+      Old ports: A=4'0101, B=4'0011, Y=$memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$27$rdmux[0][1][0]$b$598
+      New ports: A=2'10, B=2'01, Y=$memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$27$rdmux[0][1][0]$b$598 [2:1]
+      New connections: { $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$27$rdmux[0][1][0]$b$598 [3] $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$27$rdmux[0][1][0]$b$598 [0] } = 2'01
+    Consolidated identical input bits for $mux cell $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$27$rdmux[0][2][0]$602:
+      Old ports: A=4'0100, B=4'1001, Y=$memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$27$rdmux[0][1][0]$a$597
+      New ports: A=2'10, B=2'01, Y={ $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$27$rdmux[0][1][0]$a$597 [2] $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$27$rdmux[0][1][0]$a$597 [0] }
+      New connections: { $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$27$rdmux[0][1][0]$a$597 [3] $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$27$rdmux[0][1][0]$a$597 [1] } = { $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$27$rdmux[0][1][0]$a$597 [0] 1'0 }
+    Consolidated identical input bits for $mux cell $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][4][13]$698:
+      Old ports: A=6'010110, B=6'110110, Y=$memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][6]$b$655
+      New ports: A=1'0, B=1'1, Y=$memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][6]$b$655 [5]
+      New connections: $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][6]$b$655 [4:0] = 5'10110
+    Consolidated identical input bits for $mux cell $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][5][29]$584:
+      Old ports: A=5'10111, B=5'00000, Y=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][14]$b$493
+      New ports: A=1'1, B=1'0, Y=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][14]$b$493 [0]
+      New connections: $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][14]$b$493 [4:1] = { $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][14]$b$493 [0] 1'0 $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][14]$b$493 [0] $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][14]$b$493 [0] }
+    Consolidated identical input bits for $mux cell $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][5][28]$581:
+      Old ports: A=5'00111, B=5'01000, Y=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][14]$a$492
+      New ports: A=2'01, B=2'10, Y={ $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][14]$a$492 [3] $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][14]$a$492 [0] }
+      New connections: { $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][14]$a$492 [4] $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][14]$a$492 [2:1] } = { 1'0 $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][14]$a$492 [0] $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][14]$a$492 [0] }
+    Consolidated identical input bits for $mux cell $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][5][27]$578:
+      Old ports: A=5'11011, B=5'00000, Y=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][13]$b$490
+      New ports: A=1'1, B=1'0, Y=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][13]$b$490 [0]
+      New connections: $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][13]$b$490 [4:1] = { $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][13]$b$490 [0] $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][13]$b$490 [0] 1'0 $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][13]$b$490 [0] }
+    Consolidated identical input bits for $mux cell $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][5][26]$575:
+      Old ports: A=5'01011, B=5'00100, Y=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][13]$a$489
+      New ports: A=2'01, B=2'10, Y={ $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][13]$a$489 [2] $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][13]$a$489 [0] }
+      New connections: { $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][13]$a$489 [4:3] $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][13]$a$489 [1] } = { 1'0 $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][13]$a$489 [0] $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][13]$a$489 [0] }
+    Consolidated identical input bits for $mux cell $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][5][25]$572:
+      Old ports: A=5'10011, B=5'11000, Y=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][12]$b$487
+      New ports: A=2'01, B=2'10, Y={ $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][12]$b$487 [3] $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][12]$b$487 [0] }
+      New connections: { $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][12]$b$487 [4] $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][12]$b$487 [2:1] } = { 2'10 $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][12]$b$487 [0] }
+    Consolidated identical input bits for $mux cell $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][5][24]$569:
+      Old ports: A=5'00000, B=5'00011, Y=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][12]$a$486
+      New ports: A=1'0, B=1'1, Y=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][12]$a$486 [0]
+      New connections: $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][12]$a$486 [4:1] = { 3'000 $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][12]$a$486 [0] }
+    Consolidated identical input bits for $mux cell $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][5][23]$566:
+      Old ports: A=5'11101, B=5'00000, Y=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][11]$b$484
+      New ports: A=1'1, B=1'0, Y=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][11]$b$484 [0]
+      New connections: $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][11]$b$484 [4:1] = { $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][11]$b$484 [0] $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][11]$b$484 [0] $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][11]$b$484 [0] 1'0 }
+    Consolidated identical input bits for $mux cell $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][5][22]$563:
+      Old ports: A=5'01101, B=5'00000, Y=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][11]$a$483
+      New ports: A=1'1, B=1'0, Y=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][11]$a$483 [0]
+      New connections: $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][11]$a$483 [4:1] = { 1'0 $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][11]$a$483 [0] $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][11]$a$483 [0] 1'0 }
+    Consolidated identical input bits for $mux cell $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][5][21]$560:
+      Old ports: A=5'10101, B=5'11111, Y=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][10]$b$481
+      New ports: A=1'0, B=1'1, Y=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][10]$b$481 [1]
+      New connections: { $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][10]$b$481 [4:2] $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][10]$b$481 [0] } = { 1'1 $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][10]$b$481 [1] 2'11 }
+    Consolidated identical input bits for $mux cell $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][5][20]$557:
+      Old ports: A=5'00000, B=5'00101, Y=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][10]$a$480
+      New ports: A=1'0, B=1'1, Y=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][10]$a$480 [0]
+      New connections: $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][10]$a$480 [4:1] = { 2'00 $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][10]$a$480 [0] 1'0 }
+    Consolidated identical input bits for $mux cell $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][5][19]$554:
+      Old ports: A=5'11001, B=5'00000, Y=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][9]$b$478
+      New ports: A=1'1, B=1'0, Y=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][9]$b$478 [0]
+      New connections: $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][9]$b$478 [4:1] = { $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][9]$b$478 [0] $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][9]$b$478 [0] 2'00 }
+    Consolidated identical input bits for $mux cell $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][5][18]$551:
+      Old ports: A=5'00000, B=5'01001, Y=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][9]$a$477
+      New ports: A=1'0, B=1'1, Y=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][9]$a$477 [0]
+      New connections: $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][9]$a$477 [4:1] = { 1'0 $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][9]$a$477 [0] 2'00 }
+    Consolidated identical input bits for $mux cell $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][5][17]$548:
+      Old ports: A=5'00000, B=5'10001, Y=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][8]$b$475
+      New ports: A=1'0, B=1'1, Y=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][8]$b$475 [0]
+      New connections: $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][8]$b$475 [4:1] = { $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][8]$b$475 [0] 3'000 }
+    Consolidated identical input bits for $mux cell $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][4][11]$692:
+      Old ports: A=6'011010, B=6'111010, Y=$memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][5]$b$652
+      New ports: A=1'0, B=1'1, Y=$memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][5]$b$652 [5]
+      New connections: $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][5]$b$652 [4:0] = 5'11010
+    Consolidated identical input bits for $mux cell $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][5][15]$542:
+      Old ports: A=5'11110, B=5'00000, Y=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][7]$b$472
+      New ports: A=1'1, B=1'0, Y=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][7]$b$472 [1]
+      New connections: { $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][7]$b$472 [4:2] $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][7]$b$472 [0] } = { $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][7]$b$472 [1] $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][7]$b$472 [1] $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][7]$b$472 [1] 1'0 }
+    Consolidated identical input bits for $mux cell $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][5][14]$539:
+      Old ports: A=5'01110, B=5'00001, Y=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][7]$a$471
+      New ports: A=2'10, B=2'01, Y=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][7]$a$471 [1:0]
+      New connections: $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][7]$a$471 [4:2] = { 1'0 $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][7]$a$471 [1] $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][7]$a$471 [1] }
+    Consolidated identical input bits for $mux cell $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][5][13]$536:
+      Old ports: A=5'10110, B=5'10000, Y=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][6]$b$469
+      New ports: A=1'1, B=1'0, Y=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][6]$b$469 [1]
+      New connections: { $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][6]$b$469 [4:2] $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][6]$b$469 [0] } = { 2'10 $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][6]$b$469 [1] 1'0 }
+    Consolidated identical input bits for $mux cell $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][5][12]$533:
+      Old ports: A=5'00000, B=5'00110, Y=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][6]$a$468
+      New ports: A=1'0, B=1'1, Y=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][6]$a$468 [1]
+      New connections: { $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][6]$a$468 [4:2] $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][6]$a$468 [0] } = { 2'00 $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][6]$a$468 [1] 1'0 }
+    Consolidated identical input bits for $mux cell $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][5][11]$530:
+      Old ports: A=5'11010, B=5'01111, Y=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][5]$b$466
+      New ports: A=2'10, B=2'01, Y={ $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][5]$b$466 [4] $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][5]$b$466 [0] }
+      New connections: $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][5]$b$466 [3:1] = { 1'1 $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][5]$b$466 [0] 1'1 }
+    Consolidated identical input bits for $mux cell $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][5][10]$527:
+      Old ports: A=5'00000, B=5'01010, Y=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][5]$a$465
+      New ports: A=1'0, B=1'1, Y=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][5]$a$465 [1]
+      New connections: { $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][5]$a$465 [4:2] $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][5]$a$465 [0] } = { 1'0 $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][5]$a$465 [1] 2'00 }
+    Consolidated identical input bits for $mux cell $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][5][9]$524:
+      Old ports: A=5'00010, B=5'10010, Y=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][4]$b$463
+      New ports: A=1'0, B=1'1, Y=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][4]$b$463 [4]
+      New connections: $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][4]$b$463 [3:0] = 4'0010
+    Consolidated identical input bits for $mux cell $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][4][8]$683:
+      Old ports: A=6'011011, B=6'100011, Y=$memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][4]$a$648
+      New ports: A=2'01, B=2'10, Y={ $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][4]$a$648 [5] $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][4]$a$648 [3] }
+      New connections: { $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][4]$a$648 [4] $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][4]$a$648 [2:0] } = { $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][4]$a$648 [3] 3'011 }
+    Consolidated identical input bits for $mux cell $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][5][7]$518:
+      Old ports: A=5'11100, B=5'00000, Y=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][3]$b$460
+      New ports: A=1'1, B=1'0, Y=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][3]$b$460 [2]
+      New connections: { $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][3]$b$460 [4:3] $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][3]$b$460 [1:0] } = { $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][3]$b$460 [2] $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][3]$b$460 [2] 2'00 }
+    Consolidated identical input bits for $mux cell $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][5][6]$515:
+      Old ports: A=5'00000, B=5'01100, Y=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][3]$a$459
+      New ports: A=1'0, B=1'1, Y=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][3]$a$459 [2]
+      New connections: { $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][3]$a$459 [4:3] $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][3]$a$459 [1:0] } = { 1'0 $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][3]$a$459 [2] 2'00 }
+    Consolidated identical input bits for $mux cell $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][5][5]$512:
+      Old ports: A=5'00000, B=5'10100, Y=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][2]$b$457
+      New ports: A=1'0, B=1'1, Y=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][2]$b$457 [2]
+      New connections: { $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][2]$b$457 [4:3] $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][2]$b$457 [1:0] } = { $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][2]$b$457 [2] 3'000 }
+    Consolidated identical input bits for $mux cell $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][4][3]$668:
+      Old ports: A=6'011001, B=6'111000, Y=$memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][1]$b$640
+      New ports: A=2'01, B=2'10, Y={ $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][1]$b$640 [5] $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][1]$b$640 [0] }
+      New connections: $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][1]$b$640 [4:1] = 4'1100
+    Consolidated identical input bits for $mux cell $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][4][2]$665:
+      Old ports: A=6'110101, B=6'101001, Y=$memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][1]$a$639
+      New ports: A=2'01, B=2'10, Y=$memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][1]$a$639 [3:2]
+      New connections: { $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][1]$a$639 [5:4] $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][1]$a$639 [1:0] } = { 1'1 $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][1]$a$639 [2] 2'01 }
+    Consolidated identical input bits for $mux cell $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][4][7]$680:
+      Old ports: A=6'011100, B=6'010111, Y=$memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][3]$b$646
+      New ports: A=2'10, B=2'01, Y={ $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][3]$b$646 [3] $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][3]$b$646 [0] }
+      New connections: { $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][3]$b$646 [5:4] $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][3]$b$646 [2:1] } = { 3'011 $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][3]$b$646 [0] }
+    Consolidated identical input bits for $mux cell $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][4][9]$686:
+      Old ports: A=6'010011, B=6'110010, Y=$memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][4]$b$649
+      New ports: A=2'01, B=2'10, Y={ $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][4]$b$649 [5] $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][4]$b$649 [0] }
+      New connections: $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][4]$b$649 [4:1] = 4'1001
+    Consolidated identical input bits for $mux cell $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][4][10]$689:
+      Old ports: A=6'001011, B=6'101010, Y=$memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][5]$a$651
+      New ports: A=2'01, B=2'10, Y={ $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][5]$a$651 [5] $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][5]$a$651 [0] }
+      New connections: $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][5]$a$651 [4:1] = 4'0101
+    Consolidated identical input bits for $mux cell $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][4][12]$695:
+      Old ports: A=6'110011, B=6'100110, Y=$memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][6]$a$654
+      New ports: A=2'01, B=2'10, Y={ $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][6]$a$654 [2] $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][6]$a$654 [0] }
+      New connections: { $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][6]$a$654 [5:3] $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][6]$a$654 [1] } = { 1'1 $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][6]$a$654 [0] 2'01 }
+    Consolidated identical input bits for $mux cell $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][4][1]$662:
+      Old ports: A=6'010010, B=6'110001, Y=$memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][0]$b$637
+      New ports: A=2'10, B=2'01, Y=$memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][0]$b$637 [1:0]
+      New connections: $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][0]$b$637 [5:2] = { $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][0]$b$637 [0] 3'100 }
+    Consolidated identical input bits for $mux cell $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][4][0]$659:
+      Old ports: A=6'011000, B=6'011101, Y=$memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][0]$a$636
+      New ports: A=1'0, B=1'1, Y=$memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][0]$a$636 [0]
+      New connections: $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][0]$a$636 [5:1] = { 3'011 $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][0]$a$636 [0] 1'0 }
+    Consolidated identical input bits for $mux cell $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][4][6]$677:
+      Old ports: A=6'001101, B=6'101100, Y=$memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][3]$a$645
+      New ports: A=2'01, B=2'10, Y={ $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][3]$a$645 [5] $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][3]$a$645 [0] }
+      New connections: $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][3]$a$645 [4:1] = 4'0110
+    Consolidated identical input bits for $mux cell $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$35$rdmux[0][3][5]$395:
+      Old ports: A=3'101, B=3'000, Y=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$35$rdmux[0][2][2]$b$376
+      New ports: A=1'1, B=1'0, Y=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$35$rdmux[0][2][2]$b$376 [0]
+      New connections: $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$35$rdmux[0][2][2]$b$376 [2:1] = { $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$35$rdmux[0][2][2]$b$376 [0] 1'0 }
+    Consolidated identical input bits for $mux cell $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$35$rdmux[0][3][4]$392:
+      Old ports: A=3'000, B=3'001, Y=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$35$rdmux[0][2][2]$a$375
+      New ports: A=1'0, B=1'1, Y=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$35$rdmux[0][2][2]$a$375 [0]
+      New connections: $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$35$rdmux[0][2][2]$a$375 [2:1] = 2'00
+    Consolidated identical input bits for $mux cell $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$35$rdmux[0][3][3]$389:
+      Old ports: A=3'110, B=3'000, Y=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$35$rdmux[0][2][1]$b$373
+      New ports: A=1'1, B=1'0, Y=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$35$rdmux[0][2][1]$b$373 [1]
+      New connections: { $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$35$rdmux[0][2][1]$b$373 [2] $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$35$rdmux[0][2][1]$b$373 [0] } = { $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$35$rdmux[0][2][1]$b$373 [1] 1'0 }
+    Consolidated identical input bits for $mux cell $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$35$rdmux[0][3][2]$386:
+      Old ports: A=3'000, B=3'010, Y=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$35$rdmux[0][2][1]$a$372
+      New ports: A=1'0, B=1'1, Y=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$35$rdmux[0][2][1]$a$372 [1]
+      New connections: { $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$35$rdmux[0][2][1]$a$372 [2] $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$35$rdmux[0][2][1]$a$372 [0] } = 2'00
+    Consolidated identical input bits for $mux cell $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$35$rdmux[0][3][1]$383:
+      Old ports: A=3'100, B=3'011, Y=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$35$rdmux[0][2][0]$b$370
+      New ports: A=2'10, B=2'01, Y={ $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$35$rdmux[0][2][0]$b$370 [2] $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$35$rdmux[0][2][0]$b$370 [0] }
+      New connections: $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$35$rdmux[0][2][0]$b$370 [1] = $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$35$rdmux[0][2][0]$b$370 [0]
+    Consolidated identical input bits for $mux cell $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$35$rdmux[0][3][0]$380:
+      Old ports: A=3'000, B=3'111, Y=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$35$rdmux[0][2][0]$a$369
+      New ports: A=1'0, B=1'1, Y=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$35$rdmux[0][2][0]$a$369 [0]
+      New connections: $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$35$rdmux[0][2][0]$a$369 [2:1] = { $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$35$rdmux[0][2][0]$a$369 [0] $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$35$rdmux[0][2][0]$a$369 [0] }
+    Consolidated identical input bits for $mux cell $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][4][4]$671:
+      Old ports: A=6'111001, B=6'100101, Y=$memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][2]$a$642
+      New ports: A=2'10, B=2'01, Y=$memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][2]$a$642 [3:2]
+      New connections: { $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][2]$a$642 [5:4] $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][2]$a$642 [1:0] } = { 1'1 $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][2]$a$642 [3] 2'01 }
+    Consolidated identical input bits for $mux cell $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][4][5]$674:
+      Old ports: A=6'010101, B=6'110100, Y=$memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][2]$b$643
+      New ports: A=2'01, B=2'10, Y={ $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][2]$b$643 [5] $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][2]$b$643 [0] }
+      New connections: $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][2]$b$643 [4:1] = 4'1010
+    Consolidated identical input bits for $mux cell $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][4][14]$701:
+      Old ports: A=6'001110, B=6'101110, Y=$memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][7]$a$657
+      New ports: A=1'0, B=1'1, Y=$memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][7]$a$657 [5]
+      New connections: $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][7]$a$657 [4:0] = 5'01110
+    Consolidated identical input bits for $mux cell $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$27$rdmux[0][2][3]$611:
+      Old ports: A=4'0110, B=4'0001, Y=$memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$27$rdmux[0][1][1]$b$601
+      New ports: A=2'10, B=2'01, Y=$memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$27$rdmux[0][1][1]$b$601 [1:0]
+      New connections: $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$27$rdmux[0][1][1]$b$601 [3:2] = { 1'0 $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$27$rdmux[0][1][1]$b$601 [1] }
+    Consolidated identical input bits for $mux cell $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][4][15]$704:
+      Old ports: A=6'011110, B=6'101011, Y=$memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][7]$b$658
+      New ports: A=2'10, B=2'01, Y={ $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][7]$b$658 [2] $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][7]$b$658 [0] }
+      New connections: { $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][7]$b$658 [5:3] $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][7]$b$658 [1] } = { $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][7]$b$658 [0] $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][7]$b$658 [2] 2'11 }
+  Optimizing cells in module \serdes_8bit.
+    Consolidated identical input bits for $mux cell $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][6]$653:
+      Old ports: A=$memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][6]$a$654, B=$memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][6]$b$655, Y=$memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][2][3]$a$633
+      New ports: A={ 1'1 $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][6]$a$654 [0] $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][6]$a$654 [2] $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][6]$a$654 [0] }, B={ $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][6]$b$655 [5] 3'110 }, Y={ $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][2][3]$a$633 [5:4] $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][2][3]$a$633 [2] $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][2][3]$a$633 [0] }
+      New connections: { $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][2][3]$a$633 [3] $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][2][3]$a$633 [1] } = 2'01
+    Consolidated identical input bits for $mux cell $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][5]$650:
+      Old ports: A=$memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][5]$a$651, B=$memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][5]$b$652, Y=$memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][2][2]$b$631
+      New ports: A={ $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][5]$a$651 [5] 1'0 $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][5]$a$651 [0] }, B={ $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][5]$b$652 [5] 2'10 }, Y={ $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][2][2]$b$631 [5:4] $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][2][2]$b$631 [0] }
+      New connections: $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][2][2]$b$631 [3:1] = 3'101
+    Consolidated identical input bits for $mux cell $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][4]$647:
+      Old ports: A=$memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][4]$a$648, B=$memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][4]$b$649, Y=$memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][2][2]$a$630
+      New ports: A={ $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][4]$a$648 [5] $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][4]$a$648 [3] $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][4]$a$648 [3] 1'1 }, B={ $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][4]$b$649 [5] 2'10 $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][4]$b$649 [0] }, Y={ $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][2][2]$a$630 [5:3] $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][2][2]$a$630 [0] }
+      New connections: $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][2][2]$a$630 [2:1] = 2'01
+    Consolidated identical input bits for $mux cell $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][3]$644:
+      Old ports: A=$memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][3]$a$645, B=$memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][3]$b$646, Y=$memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][2][1]$b$628
+      New ports: A={ $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][3]$a$645 [5] 3'010 $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][3]$a$645 [0] }, B={ 2'01 $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][3]$b$646 [3] $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][3]$b$646 [0] $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][3]$b$646 [0] }, Y={ $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][2][1]$b$628 [5:3] $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][2][1]$b$628 [1:0] }
+      New connections: $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][2][1]$b$628 [2] = 1'1
+    Consolidated identical input bits for $mux cell $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][2]$641:
+      Old ports: A=$memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][2]$a$642, B=$memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][2]$b$643, Y=$memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][2][1]$a$627
+      New ports: A={ 1'1 $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][2]$a$642 [3] $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][2]$a$642 [3:2] 1'1 }, B={ $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][2]$b$643 [5] 3'101 $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][2]$b$643 [0] }, Y={ $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][2][1]$a$627 [5:2] $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][2][1]$a$627 [0] }
+      New connections: $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][2][1]$a$627 [1] = 1'0
+    Consolidated identical input bits for $mux cell $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][1]$638:
+      Old ports: A=$memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][1]$a$639, B=$memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][1]$b$640, Y=$memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][2][0]$b$625
+      New ports: A={ 1'1 $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][1]$a$639 [2] $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][1]$a$639 [3:2] 1'1 }, B={ $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][1]$b$640 [5] 3'110 $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][1]$b$640 [0] }, Y={ $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][2][0]$b$625 [5:2] $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][2][0]$b$625 [0] }
+      New connections: $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][2][0]$b$625 [1] = 1'0
+    Consolidated identical input bits for $mux cell $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][0]$635:
+      Old ports: A=$memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][0]$a$636, B=$memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][0]$b$637, Y=$memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][2][0]$a$624
+      New ports: A={ 2'01 $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][0]$a$636 [0] 1'0 $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][0]$a$636 [0] }, B={ $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][0]$b$637 [0] 2'00 $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][0]$b$637 [1:0] }, Y={ $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][2][0]$a$624 [5] $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][2][0]$a$624 [3:0] }
+      New connections: $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][2][0]$a$624 [4] = 1'1
+    Consolidated identical input bits for $mux cell $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][14]$491:
+      Old ports: A=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][14]$a$492, B=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][14]$b$493, Y=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][3][7]$a$447
+      New ports: A={ 1'0 $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][14]$a$492 [3] $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][14]$a$492 [0] }, B={ $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][14]$b$493 [0] 1'0 $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][14]$b$493 [0] }, Y={ $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][3][7]$a$447 [4:3] $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][3][7]$a$447 [0] }
+      New connections: $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][3][7]$a$447 [2:1] = { $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][3][7]$a$447 [0] $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][3][7]$a$447 [0] }
+    Consolidated identical input bits for $mux cell $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][13]$488:
+      Old ports: A=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][13]$a$489, B=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][13]$b$490, Y=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][3][6]$b$445
+      New ports: A={ 1'0 $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][13]$a$489 [2] $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][13]$a$489 [0] }, B={ $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][13]$b$490 [0] 1'0 $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][13]$b$490 [0] }, Y={ $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][3][6]$b$445 [4] $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][3][6]$b$445 [2] $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][3][6]$b$445 [0] }
+      New connections: { $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][3][6]$b$445 [3] $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][3][6]$b$445 [1] } = { $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][3][6]$b$445 [0] $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][3][6]$b$445 [0] }
+    Consolidated identical input bits for $mux cell $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][12]$485:
+      Old ports: A=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][12]$a$486, B=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][12]$b$487, Y=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][3][6]$a$444
+      New ports: A={ 2'00 $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][12]$a$486 [0] }, B={ 1'1 $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][12]$b$487 [3] $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][12]$b$487 [0] }, Y={ $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][3][6]$a$444 [4:3] $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][3][6]$a$444 [0] }
+      New connections: $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][3][6]$a$444 [2:1] = { 1'0 $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][3][6]$a$444 [0] }
+    Consolidated identical input bits for $mux cell $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][11]$482:
+      Old ports: A=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][11]$a$483, B=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][11]$b$484, Y=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][3][5]$b$442
+      New ports: A={ 1'0 $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][11]$a$483 [0] }, B={ $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][11]$b$484 [0] $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][11]$b$484 [0] }, Y={ $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][3][5]$b$442 [4] $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][3][5]$b$442 [0] }
+      New connections: $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][3][5]$b$442 [3:1] = { $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][3][5]$b$442 [0] $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][3][5]$b$442 [0] 1'0 }
+    Consolidated identical input bits for $mux cell $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][10]$479:
+      Old ports: A=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][10]$a$480, B=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][10]$b$481, Y=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][3][5]$a$441
+      New ports: A={ 2'00 $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][10]$a$480 [0] }, B={ 1'1 $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][10]$b$481 [1] 1'1 }, Y={ $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][3][5]$a$441 [4] $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][3][5]$a$441 [1:0] }
+      New connections: $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][3][5]$a$441 [3:2] = $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][3][5]$a$441 [1:0]
+    Consolidated identical input bits for $mux cell $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][9]$476:
+      Old ports: A=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][9]$a$477, B=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][9]$b$478, Y=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][3][4]$b$439
+      New ports: A={ 1'0 $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][9]$a$477 [0] }, B={ $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][9]$b$478 [0] $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][9]$b$478 [0] }, Y={ $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][3][4]$b$439 [4] $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][3][4]$b$439 [0] }
+      New connections: $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][3][4]$b$439 [3:1] = { $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][3][4]$b$439 [0] 2'00 }
+    Consolidated identical input bits for $mux cell $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][8]$473:
+      Old ports: A=5'00000, B=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][8]$b$475, Y=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][3][4]$a$438
+      New ports: A=1'0, B=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][8]$b$475 [0], Y=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][3][4]$a$438 [0]
+      New connections: $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][3][4]$a$438 [4:1] = { $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][3][4]$a$438 [0] 3'000 }
+    Consolidated identical input bits for $mux cell $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][7]$470:
+      Old ports: A=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][7]$a$471, B=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][7]$b$472, Y=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][3][3]$b$436
+      New ports: A={ 1'0 $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][7]$a$471 [1:0] }, B={ $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][7]$b$472 [1] $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][7]$b$472 [1] 1'0 }, Y={ $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][3][3]$b$436 [4] $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][3][3]$b$436 [1:0] }
+      New connections: $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][3][3]$b$436 [3:2] = { $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][3][3]$b$436 [1] $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][3][3]$b$436 [1] }
+    Consolidated identical input bits for $mux cell $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][6]$467:
+      Old ports: A=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][6]$a$468, B=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][6]$b$469, Y=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][3][3]$a$435
+      New ports: A={ 1'0 $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][6]$a$468 [1] }, B={ 1'1 $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][6]$b$469 [1] }, Y={ $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][3][3]$a$435 [4] $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][3][3]$a$435 [1] }
+      New connections: { $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][3][3]$a$435 [3:2] $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][3][3]$a$435 [0] } = { 1'0 $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][3][3]$a$435 [1] 1'0 }
+    Consolidated identical input bits for $mux cell $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][5]$464:
+      Old ports: A=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][5]$a$465, B=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][5]$b$466, Y=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][3][2]$b$433
+      New ports: A={ 1'0 $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][5]$a$465 [1] 1'0 }, B={ $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][5]$b$466 [4] 1'1 $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][5]$b$466 [0] }, Y={ $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][3][2]$b$433 [4] $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][3][2]$b$433 [1:0] }
+      New connections: $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][3][2]$b$433 [3:2] = $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][3][2]$b$433 [1:0]
+    Consolidated identical input bits for $mux cell $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][4]$461:
+      Old ports: A=5'00000, B=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][4]$b$463, Y=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][3][2]$a$432
+      New ports: A=2'00, B={ $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][4]$b$463 [4] 1'1 }, Y={ $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][3][2]$a$432 [4] $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][3][2]$a$432 [1] }
+      New connections: { $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][3][2]$a$432 [3:2] $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][3][2]$a$432 [0] } = 3'000
+    Consolidated identical input bits for $mux cell $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][3]$458:
+      Old ports: A=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][3]$a$459, B=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][3]$b$460, Y=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][3][1]$b$430
+      New ports: A={ 1'0 $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][3]$a$459 [2] }, B={ $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][3]$b$460 [2] $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][3]$b$460 [2] }, Y={ $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][3][1]$b$430 [4] $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][3][1]$b$430 [2] }
+      New connections: { $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][3][1]$b$430 [3] $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][3][1]$b$430 [1:0] } = { $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][3][1]$b$430 [2] 2'00 }
+    Consolidated identical input bits for $mux cell $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][2]$455:
+      Old ports: A=5'00000, B=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][2]$b$457, Y=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][3][1]$a$429
+      New ports: A=1'0, B=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][2]$b$457 [2], Y=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][3][1]$a$429 [2]
+      New connections: { $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][3][1]$a$429 [4:3] $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][3][1]$a$429 [1:0] } = { $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][3][1]$a$429 [2] 3'000 }
+    Consolidated identical input bits for $mux cell $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][7]$656:
+      Old ports: A=$memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][7]$a$657, B=$memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][7]$b$658, Y=$memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][2][3]$b$634
+      New ports: A={ $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][7]$a$657 [5] 3'010 }, B={ $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][7]$b$658 [0] $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][7]$b$658 [2] $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][7]$b$658 [2] $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][7]$b$658 [0] }, Y={ $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][2][3]$b$634 [5:4] $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][2][3]$b$634 [2] $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][2][3]$b$634 [0] }
+      New connections: { $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][2][3]$b$634 [3] $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][2][3]$b$634 [1] } = 2'11
+    Consolidated identical input bits for $mux cell $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$35$rdmux[0][2][2]$374:
+      Old ports: A=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$35$rdmux[0][2][2]$a$375, B=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$35$rdmux[0][2][2]$b$376, Y=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$35$rdmux[0][1][1]$a$366
+      New ports: A={ 1'0 $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$35$rdmux[0][2][2]$a$375 [0] }, B={ $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$35$rdmux[0][2][2]$b$376 [0] $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$35$rdmux[0][2][2]$b$376 [0] }, Y={ $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$35$rdmux[0][1][1]$a$366 [2] $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$35$rdmux[0][1][1]$a$366 [0] }
+      New connections: $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$35$rdmux[0][1][1]$a$366 [1] = 1'0
+    Consolidated identical input bits for $mux cell $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$35$rdmux[0][2][1]$371:
+      Old ports: A=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$35$rdmux[0][2][1]$a$372, B=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$35$rdmux[0][2][1]$b$373, Y=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$35$rdmux[0][1][0]$b$364
+      New ports: A={ 1'0 $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$35$rdmux[0][2][1]$a$372 [1] }, B={ $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$35$rdmux[0][2][1]$b$373 [1] $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$35$rdmux[0][2][1]$b$373 [1] }, Y=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$35$rdmux[0][1][0]$b$364 [2:1]
+      New connections: $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$35$rdmux[0][1][0]$b$364 [0] = 1'0
+    Consolidated identical input bits for $mux cell $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$35$rdmux[0][2][0]$368:
+      Old ports: A=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$35$rdmux[0][2][0]$a$369, B=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$35$rdmux[0][2][0]$b$370, Y=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$35$rdmux[0][1][0]$a$363
+      New ports: A={ $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$35$rdmux[0][2][0]$a$369 [0] $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$35$rdmux[0][2][0]$a$369 [0] }, B={ $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$35$rdmux[0][2][0]$b$370 [2] $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$35$rdmux[0][2][0]$b$370 [0] }, Y={ $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$35$rdmux[0][1][0]$a$363 [2] $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$35$rdmux[0][1][0]$a$363 [0] }
+      New connections: $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$35$rdmux[0][1][0]$a$363 [1] = $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$35$rdmux[0][1][0]$a$363 [0]
+  Optimizing cells in module \serdes_8bit.
+    Consolidated identical input bits for $mux cell $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][2][3]$632:
+      Old ports: A=$memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][2][3]$a$633, B=$memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][2][3]$b$634, Y=$memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][1][1]$b$622
+      New ports: A={ $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][2][3]$a$633 [5:4] 1'0 $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][2][3]$a$633 [2] $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][2][3]$a$633 [0] }, B={ $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][2][3]$b$634 [5:4] 1'1 $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][2][3]$b$634 [2] $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][2][3]$b$634 [0] }, Y={ $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][1][1]$b$622 [5:2] $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][1][1]$b$622 [0] }
+      New connections: $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][1][1]$b$622 [1] = 1'1
+    Consolidated identical input bits for $mux cell $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][2][2]$629:
+      Old ports: A=$memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][2][2]$a$630, B=$memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][2][2]$b$631, Y=$memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][1][1]$a$621
+      New ports: A={ $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][2][2]$a$630 [5:3] $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][2][2]$a$630 [0] }, B={ $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][2][2]$b$631 [5:4] 1'1 $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][2][2]$b$631 [0] }, Y={ $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][1][1]$a$621 [5:3] $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][1][1]$a$621 [0] }
+      New connections: $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][1][1]$a$621 [2:1] = 2'01
+    Consolidated identical input bits for $mux cell $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][3][7]$446:
+      Old ports: A=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][3][7]$a$447, B=5'00000, Y=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][2][3]$b$424
+      New ports: A={ $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][3][7]$a$447 [4:3] $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][3][7]$a$447 [0] }, B=3'000, Y={ $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][2][3]$b$424 [4:3] $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][2][3]$b$424 [0] }
+      New connections: $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][2][3]$b$424 [2:1] = { $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][2][3]$b$424 [0] $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][2][3]$b$424 [0] }
+    Consolidated identical input bits for $mux cell $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][3][6]$443:
+      Old ports: A=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][3][6]$a$444, B=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][3][6]$b$445, Y=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][2][3]$a$423
+      New ports: A={ $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][3][6]$a$444 [4:3] 1'0 $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][3][6]$a$444 [0] }, B={ $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][3][6]$b$445 [4] $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][3][6]$b$445 [0] $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][3][6]$b$445 [2] $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][3][6]$b$445 [0] }, Y={ $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][2][3]$a$423 [4:2] $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][2][3]$a$423 [0] }
+      New connections: $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][2][3]$a$423 [1] = $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][2][3]$a$423 [0]
+    Consolidated identical input bits for $mux cell $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][3][5]$440:
+      Old ports: A=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][3][5]$a$441, B=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][3][5]$b$442, Y=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][2][2]$b$421
+      New ports: A={ $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][3][5]$a$441 [4] $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][3][5]$a$441 [1] $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][3][5]$a$441 [1:0] }, B={ $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][3][5]$b$442 [4] $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][3][5]$b$442 [0] 1'0 $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][3][5]$b$442 [0] }, Y={ $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][2][2]$b$421 [4:3] $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][2][2]$b$421 [1:0] }
+      New connections: $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][2][2]$b$421 [2] = $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][2][2]$b$421 [0]
+    Consolidated identical input bits for $mux cell $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][3][4]$437:
+      Old ports: A=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][3][4]$a$438, B=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][3][4]$b$439, Y=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][2][2]$a$420
+      New ports: A={ $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][3][4]$a$438 [0] 1'0 $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][3][4]$a$438 [0] }, B={ $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][3][4]$b$439 [4] $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][3][4]$b$439 [0] $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][3][4]$b$439 [0] }, Y={ $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][2][2]$a$420 [4:3] $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][2][2]$a$420 [0] }
+      New connections: $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][2][2]$a$420 [2:1] = 2'00
+    Consolidated identical input bits for $mux cell $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][3][3]$434:
+      Old ports: A=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][3][3]$a$435, B=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][3][3]$b$436, Y=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][2][1]$b$418
+      New ports: A={ $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][3][3]$a$435 [4] 1'0 $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][3][3]$a$435 [1] 1'0 }, B={ $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][3][3]$b$436 [4] $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][3][3]$b$436 [1] $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][3][3]$b$436 [1:0] }, Y={ $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][2][1]$b$418 [4:3] $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][2][1]$b$418 [1:0] }
+      New connections: $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][2][1]$b$418 [2] = $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][2][1]$b$418 [1]
+    Consolidated identical input bits for $mux cell $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][3][2]$431:
+      Old ports: A=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][3][2]$a$432, B=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][3][2]$b$433, Y=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][2][1]$a$417
+      New ports: A={ $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][3][2]$a$432 [4] 1'0 $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][3][2]$a$432 [1] 1'0 }, B={ $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][3][2]$b$433 [4] $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][3][2]$b$433 [1] $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][3][2]$b$433 [1:0] }, Y={ $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][2][1]$a$417 [4:3] $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][2][1]$a$417 [1:0] }
+      New connections: $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][2][1]$a$417 [2] = $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][2][1]$a$417 [0]
+    Consolidated identical input bits for $mux cell $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][3][1]$428:
+      Old ports: A=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][3][1]$a$429, B=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][3][1]$b$430, Y=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][2][0]$b$415
+      New ports: A={ $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][3][1]$a$429 [2] 1'0 $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][3][1]$a$429 [2] }, B={ $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][3][1]$b$430 [4] $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][3][1]$b$430 [2] $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][3][1]$b$430 [2] }, Y=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][2][0]$b$415 [4:2]
+      New connections: $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][2][0]$b$415 [1:0] = 2'00
+    Consolidated identical input bits for $mux cell $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$35$rdmux[0][1][1]$365:
+      Old ports: A=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$35$rdmux[0][1][1]$a$366, B=3'000, Y=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$35$rdmux[0][0][0]$b$361
+      New ports: A={ $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$35$rdmux[0][1][1]$a$366 [2] $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$35$rdmux[0][1][1]$a$366 [0] }, B=2'00, Y={ $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$35$rdmux[0][0][0]$b$361 [2] $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$35$rdmux[0][0][0]$b$361 [0] }
+      New connections: $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$35$rdmux[0][0][0]$b$361 [1] = 1'0
+  Optimizing cells in module \serdes_8bit.
+    Consolidated identical input bits for $mux cell $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][1][1]$620:
+      Old ports: A=$memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][1][1]$a$621, B=$memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][1][1]$b$622, Y=$memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][0][0]$b$616
+      New ports: A={ $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][1][1]$a$621 [5:3] 1'0 $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][1][1]$a$621 [0] }, B={ $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][1][1]$b$622 [5:2] $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][1][1]$b$622 [0] }, Y={ $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][0][0]$b$616 [5:2] $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][0][0]$b$616 [0] }
+      New connections: $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][0][0]$b$616 [1] = 1'1
+    Consolidated identical input bits for $mux cell $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][2][3]$422:
+      Old ports: A=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][2][3]$a$423, B=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][2][3]$b$424, Y=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][1][1]$b$412
+      New ports: A={ $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][2][3]$a$423 [4:2] $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][2][3]$a$423 [0] }, B={ $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][2][3]$b$424 [4:3] $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][2][3]$b$424 [0] $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][2][3]$b$424 [0] }, Y={ $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][1][1]$b$412 [4:2] $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][1][1]$b$412 [0] }
+      New connections: $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][1][1]$b$412 [1] = $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][1][1]$b$412 [0]
+    Consolidated identical input bits for $mux cell $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][2][0]$413:
+      Old ports: A=5'00000, B=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][2][0]$b$415, Y=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][1][0]$a$408
+      New ports: A=3'000, B=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][2][0]$b$415 [4:2], Y=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][1][0]$a$408 [4:2]
+      New connections: $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][1][0]$a$408 [1:0] = 2'00
+  Optimizing cells in module \serdes_8bit.
+Performed a total of 86 changes.
+
+99. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\serdes_8bit'.
+<suppressed ~126 debug messages>
+Removed a total of 42 cells.
+
+100. Executing OPT_SHARE pass.
+
+101. Executing OPT_DFF pass (perform DFF optimizations).
+
+102. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \serdes_8bit..
+Removed 1 unused cells and 179 unused wires.
+<suppressed ~2 debug messages>
+
+103. Executing OPT_EXPR pass (perform const folding).
+Optimizing module serdes_8bit.
+<suppressed ~7 debug messages>
+
+104. Rerunning OPT passes. (Maybe there is more to do…)
+
+105. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \serdes_8bit..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~14 debug messages>
+
+106. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \serdes_8bit.
+    Consolidated identical input bits for $mux cell $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][11]$482:
+      Old ports: A={ 1'0 $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][11]$a$483 [3] }, B={ $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][11]$a$483 [3] $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][11]$a$483 [3] }, Y=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][3][5]$b$442 [4:3]
+      New ports: A=1'0, B=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][11]$a$483 [3], Y=$memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][3][5]$b$442 [4]
+      New connections: $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][3][5]$b$442 [3] = $memory$flatten\deserializer_u2.$auto$proc_rom.cc:155:do_switch$39$rdmux[0][4][11]$a$483 [3]
+    Consolidated identical input bits for $mux cell $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$27$rdmux[0][1][0]$596:
+      Old ports: A={ $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$27$rdmux[0][1][0]$a$597 [3:2] 1'0 $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$27$rdmux[0][1][0]$a$597 [3] }, B={ 1'0 $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$27$rdmux[0][1][0]$a$597 [2] $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$27$rdmux[0][1][0]$a$597 [3] 1'1 }, Y=$memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$27$rdmux[0][0][0]$a$594
+      New ports: A={ $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$27$rdmux[0][1][0]$a$597 [3] 1'0 $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$27$rdmux[0][1][0]$a$597 [3] }, B={ 1'0 $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$27$rdmux[0][1][0]$a$597 [3] 1'1 }, Y={ $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$27$rdmux[0][0][0]$a$594 [3] $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$27$rdmux[0][0][0]$a$594 [1:0] }
+      New connections: $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$27$rdmux[0][0][0]$a$594 [2] = $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$27$rdmux[0][1][0]$a$597 [2]
+    Consolidated identical input bits for $mux cell $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][4]$647:
+      Old ports: A={ $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][1]$a$639 [3] $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][1]$a$639 [4] $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][1]$a$639 [4] 1'1 }, B={ $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][1]$a$639 [3] 2'10 $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][1]$a$639 [4] }, Y={ $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][2][2]$a$630 [5:3] $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][2][2]$a$630 [0] }
+      New ports: A={ $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][1]$a$639 [4] $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][1]$a$639 [4] 1'1 }, B={ 2'10 $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][1]$a$639 [4] }, Y={ $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][2][2]$a$630 [4:3] $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][2][2]$a$630 [0] }
+      New connections: $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][2][2]$a$630 [5] = $memory$flatten\serializer_u2.$auto$proc_rom.cc:155:do_switch$31$rdmux[0][3][1]$a$639 [3]
+  Optimizing cells in module \serdes_8bit.
+Performed a total of 3 changes.
+
+107. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\serdes_8bit'.
+Removed a total of 0 cells.
+
+108. Executing OPT_SHARE pass.
+
+109. Executing OPT_DFF pass (perform DFF optimizations).
+
+110. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \serdes_8bit..
+Removed 0 unused cells and 5 unused wires.
+<suppressed ~1 debug messages>
+
+111. Executing OPT_EXPR pass (perform const folding).
+Optimizing module serdes_8bit.
+<suppressed ~1 debug messages>
+
+112. Rerunning OPT passes. (Maybe there is more to do…)
+
+113. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \serdes_8bit..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~14 debug messages>
+
+114. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \serdes_8bit.
+Performed a total of 0 changes.
+
+115. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\serdes_8bit'.
+Removed a total of 0 cells.
+
+116. Executing OPT_SHARE pass.
+
+117. Executing OPT_DFF pass (perform DFF optimizations).
+
+118. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \serdes_8bit..
+
+119. Executing OPT_EXPR pass (perform const folding).
+Optimizing module serdes_8bit.
+
+120. Executing TECHMAP pass (map to technology primitives).
+
+120.1. Executing Verilog-2005 frontend: /nix/store/9r0bh7sp051dpm8km8bqlb028anpd3v3-yosys/bin/../share/yosys/techmap.v
+Parsing Verilog input from `/nix/store/9r0bh7sp051dpm8km8bqlb028anpd3v3-yosys/bin/../share/yosys/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu_brent_kung'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `\$__div_mod_u'.
+Generating RTLIL representation for module `\$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `\$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_pmux'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Successfully finished Verilog frontend.
+
+120.2. Continuing TECHMAP pass.
+Using extmapper simplemap for cells of type $mux.
+Using extmapper simplemap for cells of type $sdffe.
+Using extmapper simplemap for cells of type $not.
+Using extmapper simplemap for cells of type $and.
+Using extmapper simplemap for cells of type $dlatch.
+Using extmapper simplemap for cells of type $dffe.
+Using template $paramod$8742280fdebca84e1c87f2a86ed84f62d558f4cc\_90_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $sdff.
+Using extmapper simplemap for cells of type $reduce_and.
+Using extmapper simplemap for cells of type $eq.
+Using extmapper simplemap for cells of type $reduce_or.
+Using extmapper simplemap for cells of type $dff.
+Using extmapper simplemap for cells of type $logic_not.
+Using extmapper simplemap for cells of type $xor.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000000100 for cells of type $lcu.
+Using extmapper simplemap for cells of type $pos.
+Using extmapper simplemap for cells of type $or.
+No more expansions possible.
+<suppressed ~322 debug messages>
+
+121. Executing OPT_EXPR pass (perform const folding).
+Optimizing module serdes_8bit.
+<suppressed ~47 debug messages>
+
+122. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\serdes_8bit'.
+<suppressed ~138 debug messages>
+Removed a total of 46 cells.
+
+123. Executing OPT_DFF pass (perform DFF optimizations).
+
+124. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \serdes_8bit..
+Removed 5 unused cells and 72 unused wires.
+<suppressed ~6 debug messages>
+
+125. Executing OPT_EXPR pass (perform const folding).
+Optimizing module serdes_8bit.
+<suppressed ~2 debug messages>
+
+126. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\serdes_8bit'.
+<suppressed ~3 debug messages>
+Removed a total of 1 cells.
+
+127. Executing OPT_DFF pass (perform DFF optimizations).
+
+128. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \serdes_8bit..
+Removed 0 unused cells and 1 unused wires.
+<suppressed ~1 debug messages>
+
+129. Executing ABC pass (technology mapping using ABC).
+
+129.1. Extracting gate netlist of module `\serdes_8bit' to `<abc-temp-dir>/input.blif'..
+Extracted 192 gates and 250 wires to a netlist network with 56 inputs and 52 outputs.
+
+129.1.1. Executing ABC.
+Running ABC command: "/nix/store/6l3aj1gi4lja8z5s4lan2k2cfz9mqkrz-yosys-abc/bin/abc" -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: ABC command line: "source <abc-temp-dir>/abc.script".
+ABC: 
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: Entered genlib library with 13 gates from file "<abc-temp-dir>/stdcells.genlib".
+ABC: + strash 
+ABC: + dretime 
+ABC: + map 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+129.1.2. Re-integrating ABC results.
+ABC RESULTS:               NOR cells:        4
+ABC RESULTS:             ORNOT cells:        5
+ABC RESULTS:               MUX cells:       75
+ABC RESULTS:              NAND cells:        6
+ABC RESULTS:               AND cells:       15
+ABC RESULTS:              XNOR cells:        2
+ABC RESULTS:               NOT cells:       17
+ABC RESULTS:                OR cells:       16
+ABC RESULTS:               XOR cells:        3
+ABC RESULTS:            ANDNOT cells:       38
+ABC RESULTS:        internal signals:      142
+ABC RESULTS:           input signals:       56
+ABC RESULTS:          output signals:       52
+Removing temp directory.
+
+130. Executing OPT pass (performing simple optimizations).
+
+130.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module serdes_8bit.
+<suppressed ~49 debug messages>
+
+130.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\serdes_8bit'.
+Removed a total of 0 cells.
+
+130.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+130.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \serdes_8bit..
+Removed 4 unused cells and 159 unused wires.
+<suppressed ~5 debug messages>
+
+130.5. Finished fast OPT passes.
+
+131. Executing HIERARCHY pass (managing design hierarchy).
+
+131.1. Analyzing design hierarchy..
+Top module:  \serdes_8bit
+
+131.2. Analyzing design hierarchy..
+Top module:  \serdes_8bit
+Removed 0 unused modules.
+
+132. Executing CHECK pass (checking for obvious problems).
+Checking module serdes_8bit...
+Found and reported 0 problems.
+
+133. Printing statistics.
+
+=== serdes_8bit ===
+
+   Number of wires:                214
+   Number of wire bits:            374
+   Number of public wires:          54
+   Number of public wire bits:     197
+   Number of ports:                  6
+   Number of port bits:             20
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                268
+     $_ANDNOT_                      38
+     $_AND_                         15
+     $_DFFE_PP_                     29
+     $_DFF_P_                        6
+     $_DLATCH_N_                     8
+     $_MUX_                         75
+     $_NAND_                         6
+     $_NOR_                          4
+     $_NOT_                         13
+     $_ORNOT_                        5
+     $_OR_                          16
+     $_SDFFE_PN0N_                  10
+     $_SDFFE_PN0P_                  18
+     $_SDFF_PN0_                    10
+     $_SDFF_PP0_                     2
+     $_SDFF_PP1_                     2
+     $_XNOR_                         2
+     $_XOR_                          3
+     $scopeinfo                      6
+
+134. Generating Graphviz representation of design.
+Writing dot description to `/home/kevinlim/rtl/serdes/backend/runs/RUN_2026-01-28_17-21-54/06-yosys-synthesis/primitive_techmap.dot'.
+Dumping module serdes_8bit to page 1.
+
+135. Executing OPT pass (performing simple optimizations).
+
+135.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module serdes_8bit.
+
+135.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\serdes_8bit'.
+Removed a total of 0 cells.
+
+135.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \serdes_8bit..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+135.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \serdes_8bit.
+Performed a total of 0 changes.
+
+135.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\serdes_8bit'.
+Removed a total of 0 cells.
+
+135.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+135.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \serdes_8bit..
+
+135.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module serdes_8bit.
+
+135.9. Finished OPT passes. (There is nothing left to do.)
+
+136. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \serdes_8bit..
+Removed 6 unused cells and 32 unused wires.
+<suppressed ~38 debug messages>
+{
+   "creator": "Yosys 0.46 (git sha1 e97731b9dda91fa5fa53ed87df7c34163ba59a41, clang++ 17.0.6 -fPIC -O3)",
+   "invocation": "stat -json -liberty /home/kevinlim/rtl/serdes/backend/runs/RUN_2026-01-28_17-21-54/tmp/bb8cb0ca056b4459a1968bb5f18bb348.lib ",
+   "modules": {
+      "\\serdes_8bit": {
+         "num_wires":         182,
+         "num_wire_bits":     278,
+         "num_pub_wires":     22,
+         "num_pub_wire_bits": 101,
+         "num_ports":         6,
+         "num_port_bits":     20,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         262,
+         "num_cells_by_type": {
+            "$_ANDNOT_": 38,
+            "$_AND_": 15,
+            "$_DFFE_PP_": 29,
+            "$_DFF_P_": 6,
+            "$_DLATCH_N_": 8,
+            "$_MUX_": 75,
+            "$_NAND_": 6,
+            "$_NOR_": 4,
+            "$_NOT_": 13,
+            "$_ORNOT_": 5,
+            "$_OR_": 16,
+            "$_SDFFE_PN0N_": 10,
+            "$_SDFFE_PN0P_": 18,
+            "$_SDFF_PN0_": 10,
+            "$_SDFF_PP0_": 2,
+            "$_SDFF_PP1_": 2,
+            "$_XNOR_": 2,
+            "$_XOR_": 3
+         }
+      }
+   },
+      "design": {
+         "num_wires":         182,
+         "num_wire_bits":     278,
+         "num_pub_wires":     22,
+         "num_pub_wire_bits": 101,
+         "num_ports":         6,
+         "num_port_bits":     20,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         262,
+         "num_cells_by_type": {
+            "$_ANDNOT_": 38,
+            "$_AND_": 15,
+            "$_DFFE_PP_": 29,
+            "$_DFF_P_": 6,
+            "$_DLATCH_N_": 8,
+            "$_MUX_": 75,
+            "$_NAND_": 6,
+            "$_NOR_": 4,
+            "$_NOT_": 13,
+            "$_ORNOT_": 5,
+            "$_OR_": 16,
+            "$_SDFFE_PN0N_": 10,
+            "$_SDFFE_PN0P_": 18,
+            "$_SDFF_PN0_": 10,
+            "$_SDFF_PP0_": 2,
+            "$_SDFF_PP1_": 2,
+            "$_XNOR_": 2,
+            "$_XOR_": 3
+         }
+      }
+}
+
+137. Printing statistics.
+
+=== serdes_8bit ===
+
+   Number of wires:                182
+   Number of wire bits:            278
+   Number of public wires:          22
+   Number of public wire bits:     101
+   Number of ports:                  6
+   Number of port bits:             20
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                262
+     $_ANDNOT_                      38
+     $_AND_                         15
+     $_DFFE_PP_                     29
+     $_DFF_P_                        6
+     $_DLATCH_N_                     8
+     $_MUX_                         75
+     $_NAND_                         6
+     $_NOR_                          4
+     $_NOT_                         13
+     $_ORNOT_                        5
+     $_OR_                          16
+     $_SDFFE_PN0N_                  10
+     $_SDFFE_PN0P_                  18
+     $_SDFF_PN0_                    10
+     $_SDFF_PP0_                     2
+     $_SDFF_PP1_                     2
+     $_XNOR_                         2
+     $_XOR_                          3
+
+   Area for cell type $_NOT_ is unknown!
+   Area for cell type $_AND_ is unknown!
+   Area for cell type $_NAND_ is unknown!
+   Area for cell type $_OR_ is unknown!
+   Area for cell type $_NOR_ is unknown!
+   Area for cell type $_XOR_ is unknown!
+   Area for cell type $_XNOR_ is unknown!
+   Area for cell type $_ANDNOT_ is unknown!
+   Area for cell type $_ORNOT_ is unknown!
+   Area for cell type $_MUX_ is unknown!
+   Area for cell type $_DFF_P_ is unknown!
+   Area for cell type $_DFFE_PP_ is unknown!
+   Area for cell type $_SDFF_PN0_ is unknown!
+   Area for cell type $_SDFF_PP0_ is unknown!
+   Area for cell type $_SDFF_PP1_ is unknown!
+   Area for cell type $_SDFFE_PN0N_ is unknown!
+   Area for cell type $_SDFFE_PN0P_ is unknown!
+   Area for cell type $_DLATCH_N_ is unknown!
+
+[INFO] Applying tri-state buffer mapping from '/home/kevinlim/.ciel/ciel/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.tech/openlane/sky130_fd_sc_hd/tribuff_map.v'…
+
+138. Executing TECHMAP pass (map to technology primitives).
+
+138.1. Executing Verilog-2005 frontend: /home/kevinlim/.ciel/ciel/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.tech/openlane/sky130_fd_sc_hd/tribuff_map.v
+Parsing Verilog input from `/home/kevinlim/.ciel/ciel/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.tech/openlane/sky130_fd_sc_hd/tribuff_map.v' to AST representation.
+Generating RTLIL representation for module `\$_TBUF_'.
+Successfully finished Verilog frontend.
+
+138.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~3 debug messages>
+
+139. Executing SIMPLEMAP pass (map simple cells to gate primitives).
+[INFO] Applying latch mapping from '/home/kevinlim/.ciel/ciel/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.tech/openlane/sky130_fd_sc_hd/latch_map.v'…
+
+140. Executing TECHMAP pass (map to technology primitives).
+
+140.1. Executing Verilog-2005 frontend: /home/kevinlim/.ciel/ciel/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.tech/openlane/sky130_fd_sc_hd/latch_map.v
+Parsing Verilog input from `/home/kevinlim/.ciel/ciel/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.tech/openlane/sky130_fd_sc_hd/latch_map.v' to AST representation.
+Generating RTLIL representation for module `\$_DLATCH_P_'.
+Generating RTLIL representation for module `\$_DLATCH_N_'.
+Successfully finished Verilog frontend.
+
+140.2. Continuing TECHMAP pass.
+Using template \$_DLATCH_N_ for cells of type $_DLATCH_N_.
+No more expansions possible.
+<suppressed ~12 debug messages>
+
+141. Executing SIMPLEMAP pass (map simple cells to gate primitives).
+
+142. Executing DFFLIBMAP pass (mapping DFF cells to sequential cells from liberty file).
+  cell sky130_fd_sc_hd__dfxtp_2 (noninv, pins=3, area=21.27) is a direct match for cell type $_DFF_P_.
+  cell sky130_fd_sc_hd__dfrtp_2 (noninv, pins=4, area=26.28) is a direct match for cell type $_DFF_PN0_.
+  cell sky130_fd_sc_hd__dfstp_2 (noninv, pins=4, area=26.28) is a direct match for cell type $_DFF_PN1_.
+  cell sky130_fd_sc_hd__dfbbn_2 (noninv, pins=6, area=35.03) is a direct match for cell type $_DFFSR_NNN_.
+  final dff cell mappings:
+    unmapped dff cell: $_DFF_N_
+    \sky130_fd_sc_hd__dfxtp_2 _DFF_P_ (.CLK( C), .D( D), .Q( Q));
+    unmapped dff cell: $_DFF_NN0_
+    unmapped dff cell: $_DFF_NN1_
+    unmapped dff cell: $_DFF_NP0_
+    unmapped dff cell: $_DFF_NP1_
+    \sky130_fd_sc_hd__dfrtp_2 _DFF_PN0_ (.CLK( C), .D( D), .Q( Q), .RESET_B( R));
+    \sky130_fd_sc_hd__dfstp_2 _DFF_PN1_ (.CLK( C), .D( D), .Q( Q), .SET_B( R));
+    unmapped dff cell: $_DFF_PP0_
+    unmapped dff cell: $_DFF_PP1_
+    \sky130_fd_sc_hd__dfbbn_2 _DFFSR_NNN_ (.CLK_N( C), .D( D), .Q( Q), .Q_N(~Q), .RESET_B( R), .SET_B( S));
+    unmapped dff cell: $_DFFSR_NNP_
+    unmapped dff cell: $_DFFSR_NPN_
+    unmapped dff cell: $_DFFSR_NPP_
+    unmapped dff cell: $_DFFSR_PNN_
+    unmapped dff cell: $_DFFSR_PNP_
+    unmapped dff cell: $_DFFSR_PPN_
+    unmapped dff cell: $_DFFSR_PPP_
+
+142.1. Executing DFFLEGALIZE pass (convert FFs to types supported by the target).
+Mapping DFF cells in module `\serdes_8bit':
+  mapped 77 $_DFF_P_ cells to \sky130_fd_sc_hd__dfxtp_2 cells.
+{
+   "creator": "Yosys 0.46 (git sha1 e97731b9dda91fa5fa53ed87df7c34163ba59a41, clang++ 17.0.6 -fPIC -O3)",
+   "invocation": "stat -json -liberty /home/kevinlim/rtl/serdes/backend/runs/RUN_2026-01-28_17-21-54/tmp/bb8cb0ca056b4459a1968bb5f18bb348.lib ",
+   "modules": {
+      "\\serdes_8bit": {
+         "num_wires":         305,
+         "num_wire_bits":     401,
+         "num_pub_wires":     22,
+         "num_pub_wire_bits": 101,
+         "num_ports":         6,
+         "num_port_bits":     20,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         361,
+         "area":              1757.936000,
+         "num_cells_by_type": {
+            "$_ANDNOT_": 38,
+            "$_AND_": 15,
+            "$_MUX_": 174,
+            "$_NAND_": 6,
+            "$_NOR_": 4,
+            "$_NOT_": 13,
+            "$_ORNOT_": 5,
+            "$_OR_": 16,
+            "$_XNOR_": 2,
+            "$_XOR_": 3,
+            "sky130_fd_sc_hd__dfxtp_2": 77,
+            "sky130_fd_sc_hd__dlxtn_1": 8
+         }
+      }
+   },
+      "design": {
+         "num_wires":         305,
+         "num_wire_bits":     401,
+         "num_pub_wires":     22,
+         "num_pub_wire_bits": 101,
+         "num_ports":         6,
+         "num_port_bits":     20,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         361,
+         "area":              1757.936000,
+         "num_cells_by_type": {
+            "$_ANDNOT_": 38,
+            "$_AND_": 15,
+            "$_MUX_": 174,
+            "$_NAND_": 6,
+            "$_NOR_": 4,
+            "$_NOT_": 13,
+            "$_ORNOT_": 5,
+            "$_OR_": 16,
+            "$_XNOR_": 2,
+            "$_XOR_": 3,
+            "sky130_fd_sc_hd__dfxtp_2": 77,
+            "sky130_fd_sc_hd__dlxtn_1": 8
+         }
+      }
+}
+
+143. Printing statistics.
+
+=== serdes_8bit ===
+
+   Number of wires:                305
+   Number of wire bits:            401
+   Number of public wires:          22
+   Number of public wire bits:     101
+   Number of ports:                  6
+   Number of port bits:             20
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                361
+     $_ANDNOT_                      38
+     $_AND_                         15
+     $_MUX_                        174
+     $_NAND_                         6
+     $_NOR_                          4
+     $_NOT_                         13
+     $_ORNOT_                        5
+     $_OR_                          16
+     $_XNOR_                         2
+     $_XOR_                          3
+     sky130_fd_sc_hd__dfxtp_2       77
+     sky130_fd_sc_hd__dlxtn_1        8
+
+   Area for cell type $_NOT_ is unknown!
+   Area for cell type $_AND_ is unknown!
+   Area for cell type $_NAND_ is unknown!
+   Area for cell type $_OR_ is unknown!
+   Area for cell type $_NOR_ is unknown!
+   Area for cell type $_XOR_ is unknown!
+   Area for cell type $_XNOR_ is unknown!
+   Area for cell type $_ANDNOT_ is unknown!
+   Area for cell type $_ORNOT_ is unknown!
+   Area for cell type $_MUX_ is unknown!
+
+   Chip area for module '\serdes_8bit': 1757.936000
+     of which used for sequential elements: 1637.820800 (93.17%)
+
+[INFO] Using generated ABC script '/home/kevinlim/rtl/serdes/backend/runs/RUN_2026-01-28_17-21-54/06-yosys-synthesis/AREA_0.abc'…
+
+144. Executing ABC pass (technology mapping using ABC).
+
+144.1. Extracting gate netlist of module `\serdes_8bit' to `/tmp/yosys-abc-upwiiK/input.blif'..
+Extracted 276 gates and 373 wires to a netlist network with 95 inputs and 86 outputs.
+
+144.1.1. Executing ABC.
+Running ABC command: "/nix/store/6l3aj1gi4lja8z5s4lan2k2cfz9mqkrz-yosys-abc/bin/abc" -s -f /tmp/yosys-abc-upwiiK/abc.script 2>&1
+ABC: ABC command line: "source /tmp/yosys-abc-upwiiK/abc.script".
+ABC: 
+ABC: + read_blif /tmp/yosys-abc-upwiiK/input.blif 
+ABC: + read_lib -w /home/kevinlim/rtl/serdes/backend/runs/RUN_2026-01-28_17-21-54/tmp/bb8cb0ca056b4459a1968bb5f18bb348.lib 
+ABC: Parsing finished successfully.  Parsing time =     0.05 sec
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfbbn_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrtp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrtp_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfsbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfstp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfstp_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfxbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfxtp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfxtp_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtn_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtn_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtn_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtp_1".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__ebufn_2".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__ebufn_4".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__ebufn_8".
+ABC: Library "sky130_fd_sc_hd__tt_025C_1v80" from "/home/kevinlim/rtl/serdes/backend/runs/RUN_2026-01-28_17-21-54/tmp/bb8cb0ca056b4459a1968bb5f18bb348.lib" has 175 cells (17 skipped: 14 seq; 3 tri-state; 0 no func; 0 dont_use).  Time =     0.06 sec
+ABC: Memory =    9.54 MB. Time =     0.06 sec
+ABC: Warning: Detected 2 multi-output gates (for example, "sky130_fd_sc_hd__fa_1").
+ABC: + read_constr -v /home/kevinlim/rtl/serdes/backend/runs/RUN_2026-01-28_17-21-54/06-yosys-synthesis/synthesis.abc.sdc 
+ABC: Setting driving cell to be "sky130_fd_sc_hd__inv_2/Y".
+ABC: Setting output load to be 33.442001.
+ABC: + source /home/kevinlim/rtl/serdes/backend/runs/RUN_2026-01-28_17-21-54/06-yosys-synthesis/AREA_0.abc 
+ABC: Error: The network is combinational.
+ABC: Cannot find the default PI driving cell (sky130_fd_sc_hd__inv_2/Y) in the library.
+ABC: WireLoad = "none"  Gates =    208 (  4.8 %)   Cap = 14.7 ff (  6.1 %)   Area =     1873.05 ( 74.5 %)   Delay =  1598.69 ps  (  2.4 %)               
+ABC: Path  0 --      51 : 0    7 pi                      A =   0.00  Df =   0.0   -0.0 ps  S =   0.0 ps  Cin =  0.0 ff  Cout =  27.4 ff  Cmax =   0.0 ff  G =    0  
+ABC: Path  1 --     304 : 3    2 sky130_fd_sc_hd__or3_2  A =   7.51  Df = 453.4 -368.7 ps  S =  76.9 ps  Cin =  1.5 ff  Cout =   3.0 ff  Cmax = 310.4 ff  G =  193  
+ABC: Path  2 --     319 : 3    1 sky130_fd_sc_hd__and3_2 A =   7.51  Df =1312.6 -768.8 ps  S =  41.7 ps  Cin =  1.5 ff  Cout =   2.5 ff  Cmax = 309.5 ff  G =  159  
+ABC: Path  3 --     320 : 4    1 sky130_fd_sc_hd__a22o_2 A =  10.01  Df =1598.7 -825.0 ps  S = 179.8 ps  Cin =  2.3 ff  Cout =  33.4 ff  Cmax = 301.2 ff  G = 1424  
+ABC: Start-point = pi50 (\data_8b_out [2]).  End-point = po46 ($auto$rtlil.cc:2739:MuxGate$1500).
+ABC: netlist                       : i/o =   95/   86  lat =    0  nd =   208  edge =    601  area =1873.25  delay = 5.00  lev = 5
+ABC: + write_blif /tmp/yosys-abc-upwiiK/output.blif 
+
+144.1.2. Re-integrating ABC results.
+ABC RESULTS:   sky130_fd_sc_hd__o21ba_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__xnor2_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__xor2_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__a211o_2 cells:        2
+ABC RESULTS:   sky130_fd_sc_hd__a21boi_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__and3b_2 cells:        2
+ABC RESULTS:   sky130_fd_sc_hd__and4_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__and4bb_2 cells:        2
+ABC RESULTS:   sky130_fd_sc_hd__o31ai_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__o22a_2 cells:        2
+ABC RESULTS:   sky130_fd_sc_hd__or4b_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__o211a_2 cells:        3
+ABC RESULTS:   sky130_fd_sc_hd__a2bb2o_2 cells:        3
+ABC RESULTS:   sky130_fd_sc_hd__and2b_2 cells:        5
+ABC RESULTS:   sky130_fd_sc_hd__nand2b_2 cells:        3
+ABC RESULTS:   sky130_fd_sc_hd__nand3_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__a221oi_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__a31o_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__a311o_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__and3_2 cells:        4
+ABC RESULTS:   sky130_fd_sc_hd__o21a_2 cells:        3
+ABC RESULTS:   sky130_fd_sc_hd__o311a_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__inv_2 cells:       10
+ABC RESULTS:   sky130_fd_sc_hd__or3b_2 cells:        4
+ABC RESULTS:   sky130_fd_sc_hd__a211oi_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__a221o_2 cells:        2
+ABC RESULTS:   sky130_fd_sc_hd__or2_2 cells:        5
+ABC RESULTS:   sky130_fd_sc_hd__or3_2 cells:        4
+ABC RESULTS:   sky130_fd_sc_hd__a22o_2 cells:       18
+ABC RESULTS:   sky130_fd_sc_hd__nand2_2 cells:       16
+ABC RESULTS:   sky130_fd_sc_hd__a32o_2 cells:        8
+ABC RESULTS:   sky130_fd_sc_hd__nor2_2 cells:        8
+ABC RESULTS:   sky130_fd_sc_hd__a21o_2 cells:        8
+ABC RESULTS:   sky130_fd_sc_hd__o21ai_2 cells:       10
+ABC RESULTS:   sky130_fd_sc_hd__a21oi_2 cells:        8
+ABC RESULTS:   sky130_fd_sc_hd__mux2_1 cells:       40
+ABC RESULTS:   sky130_fd_sc_hd__and2_2 cells:       25
+ABC RESULTS:        internal signals:      192
+ABC RESULTS:           input signals:       95
+ABC RESULTS:          output signals:       86
+Removing temp directory.
+
+145. Executing SETUNDEF pass (replace undef values with defined constants).
+
+146. Executing HILOMAP pass (mapping to constant drivers).
+
+147. Executing SPLITNETS pass (splitting up multi-bit signals).
+
+148. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \serdes_8bit..
+Removed 0 unused cells and 400 unused wires.
+<suppressed ~6 debug messages>
+
+149. Executing INSBUF pass (insert buffer cells for connected wires).
+
+150. Executing CHECK pass (checking for obvious problems).
+Checking module serdes_8bit...
+Found and reported 0 problems.
+{
+   "creator": "Yosys 0.46 (git sha1 e97731b9dda91fa5fa53ed87df7c34163ba59a41, clang++ 17.0.6 -fPIC -O3)",
+   "invocation": "stat -json -liberty /home/kevinlim/rtl/serdes/backend/runs/RUN_2026-01-28_17-21-54/tmp/bb8cb0ca056b4459a1968bb5f18bb348.lib ",
+   "modules": {
+      "\\serdes_8bit": {
+         "num_wires":         290,
+         "num_wire_bits":     304,
+         "num_pub_wires":     82,
+         "num_pub_wire_bits": 96,
+         "num_ports":         6,
+         "num_port_bits":     20,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         293,
+         "area":              3630.982400,
+         "num_cells_by_type": {
+            "sky130_fd_sc_hd__a211o_2": 2,
+            "sky130_fd_sc_hd__a211oi_2": 1,
+            "sky130_fd_sc_hd__a21boi_2": 1,
+            "sky130_fd_sc_hd__a21o_2": 8,
+            "sky130_fd_sc_hd__a21oi_2": 8,
+            "sky130_fd_sc_hd__a221o_2": 2,
+            "sky130_fd_sc_hd__a221oi_2": 1,
+            "sky130_fd_sc_hd__a22o_2": 18,
+            "sky130_fd_sc_hd__a2bb2o_2": 3,
+            "sky130_fd_sc_hd__a311o_2": 1,
+            "sky130_fd_sc_hd__a31o_2": 1,
+            "sky130_fd_sc_hd__a32o_2": 8,
+            "sky130_fd_sc_hd__and2_2": 25,
+            "sky130_fd_sc_hd__and2b_2": 5,
+            "sky130_fd_sc_hd__and3_2": 4,
+            "sky130_fd_sc_hd__and3b_2": 2,
+            "sky130_fd_sc_hd__and4_2": 1,
+            "sky130_fd_sc_hd__and4bb_2": 2,
+            "sky130_fd_sc_hd__dfxtp_2": 77,
+            "sky130_fd_sc_hd__dlxtn_1": 8,
+            "sky130_fd_sc_hd__inv_2": 10,
+            "sky130_fd_sc_hd__mux2_1": 40,
+            "sky130_fd_sc_hd__nand2_2": 16,
+            "sky130_fd_sc_hd__nand2b_2": 3,
+            "sky130_fd_sc_hd__nand3_2": 1,
+            "sky130_fd_sc_hd__nor2_2": 8,
+            "sky130_fd_sc_hd__o211a_2": 3,
+            "sky130_fd_sc_hd__o21a_2": 3,
+            "sky130_fd_sc_hd__o21ai_2": 10,
+            "sky130_fd_sc_hd__o21ba_2": 1,
+            "sky130_fd_sc_hd__o22a_2": 2,
+            "sky130_fd_sc_hd__o311a_2": 1,
+            "sky130_fd_sc_hd__o31ai_2": 1,
+            "sky130_fd_sc_hd__or2_2": 5,
+            "sky130_fd_sc_hd__or3_2": 4,
+            "sky130_fd_sc_hd__or3b_2": 4,
+            "sky130_fd_sc_hd__or4b_2": 1,
+            "sky130_fd_sc_hd__xnor2_2": 1,
+            "sky130_fd_sc_hd__xor2_2": 1
+         }
+      }
+   },
+      "design": {
+         "num_wires":         290,
+         "num_wire_bits":     304,
+         "num_pub_wires":     82,
+         "num_pub_wire_bits": 96,
+         "num_ports":         6,
+         "num_port_bits":     20,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         293,
+         "area":              3630.982400,
+         "num_cells_by_type": {
+            "sky130_fd_sc_hd__a211o_2": 2,
+            "sky130_fd_sc_hd__a211oi_2": 1,
+            "sky130_fd_sc_hd__a21boi_2": 1,
+            "sky130_fd_sc_hd__a21o_2": 8,
+            "sky130_fd_sc_hd__a21oi_2": 8,
+            "sky130_fd_sc_hd__a221o_2": 2,
+            "sky130_fd_sc_hd__a221oi_2": 1,
+            "sky130_fd_sc_hd__a22o_2": 18,
+            "sky130_fd_sc_hd__a2bb2o_2": 3,
+            "sky130_fd_sc_hd__a311o_2": 1,
+            "sky130_fd_sc_hd__a31o_2": 1,
+            "sky130_fd_sc_hd__a32o_2": 8,
+            "sky130_fd_sc_hd__and2_2": 25,
+            "sky130_fd_sc_hd__and2b_2": 5,
+            "sky130_fd_sc_hd__and3_2": 4,
+            "sky130_fd_sc_hd__and3b_2": 2,
+            "sky130_fd_sc_hd__and4_2": 1,
+            "sky130_fd_sc_hd__and4bb_2": 2,
+            "sky130_fd_sc_hd__dfxtp_2": 77,
+            "sky130_fd_sc_hd__dlxtn_1": 8,
+            "sky130_fd_sc_hd__inv_2": 10,
+            "sky130_fd_sc_hd__mux2_1": 40,
+            "sky130_fd_sc_hd__nand2_2": 16,
+            "sky130_fd_sc_hd__nand2b_2": 3,
+            "sky130_fd_sc_hd__nand3_2": 1,
+            "sky130_fd_sc_hd__nor2_2": 8,
+            "sky130_fd_sc_hd__o211a_2": 3,
+            "sky130_fd_sc_hd__o21a_2": 3,
+            "sky130_fd_sc_hd__o21ai_2": 10,
+            "sky130_fd_sc_hd__o21ba_2": 1,
+            "sky130_fd_sc_hd__o22a_2": 2,
+            "sky130_fd_sc_hd__o311a_2": 1,
+            "sky130_fd_sc_hd__o31ai_2": 1,
+            "sky130_fd_sc_hd__or2_2": 5,
+            "sky130_fd_sc_hd__or3_2": 4,
+            "sky130_fd_sc_hd__or3b_2": 4,
+            "sky130_fd_sc_hd__or4b_2": 1,
+            "sky130_fd_sc_hd__xnor2_2": 1,
+            "sky130_fd_sc_hd__xor2_2": 1
+         }
+      }
+}
+
+151. Printing statistics.
+
+=== serdes_8bit ===
+
+   Number of wires:                290
+   Number of wire bits:            304
+   Number of public wires:          82
+   Number of public wire bits:      96
+   Number of ports:                  6
+   Number of port bits:             20
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                293
+     sky130_fd_sc_hd__a211o_2        2
+     sky130_fd_sc_hd__a211oi_2       1
+     sky130_fd_sc_hd__a21boi_2       1
+     sky130_fd_sc_hd__a21o_2         8
+     sky130_fd_sc_hd__a21oi_2        8
+     sky130_fd_sc_hd__a221o_2        2
+     sky130_fd_sc_hd__a221oi_2       1
+     sky130_fd_sc_hd__a22o_2        18
+     sky130_fd_sc_hd__a2bb2o_2       3
+     sky130_fd_sc_hd__a311o_2        1
+     sky130_fd_sc_hd__a31o_2         1
+     sky130_fd_sc_hd__a32o_2         8
+     sky130_fd_sc_hd__and2_2        25
+     sky130_fd_sc_hd__and2b_2        5
+     sky130_fd_sc_hd__and3_2         4
+     sky130_fd_sc_hd__and3b_2        2
+     sky130_fd_sc_hd__and4_2         1
+     sky130_fd_sc_hd__and4bb_2       2
+     sky130_fd_sc_hd__dfxtp_2       77
+     sky130_fd_sc_hd__dlxtn_1        8
+     sky130_fd_sc_hd__inv_2         10
+     sky130_fd_sc_hd__mux2_1        40
+     sky130_fd_sc_hd__nand2_2       16
+     sky130_fd_sc_hd__nand2b_2       3
+     sky130_fd_sc_hd__nand3_2        1
+     sky130_fd_sc_hd__nor2_2         8
+     sky130_fd_sc_hd__o211a_2        3
+     sky130_fd_sc_hd__o21a_2         3
+     sky130_fd_sc_hd__o21ai_2       10
+     sky130_fd_sc_hd__o21ba_2        1
+     sky130_fd_sc_hd__o22a_2         2
+     sky130_fd_sc_hd__o311a_2        1
+     sky130_fd_sc_hd__o31ai_2        1
+     sky130_fd_sc_hd__or2_2          5
+     sky130_fd_sc_hd__or3_2          4
+     sky130_fd_sc_hd__or3b_2         4
+     sky130_fd_sc_hd__or4b_2         1
+     sky130_fd_sc_hd__xnor2_2        1
+     sky130_fd_sc_hd__xor2_2         1
+
+   Chip area for module '\serdes_8bit': 3630.982400
+     of which used for sequential elements: 1637.820800 (45.11%)
+
+152. Executing Verilog backend.
+Dumping module `\serdes_8bit'.
+
+153. Executing JSON backend.

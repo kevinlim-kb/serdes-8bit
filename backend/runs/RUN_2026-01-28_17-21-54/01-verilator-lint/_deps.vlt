@@ -1,0 +1,5 @@
+`verilator_config
+lint_off -rule DECLFILENAME
+lint_off -rule EOFNEWLINE
+lint_off -rule UNDRIVEN -file "/home/kevinlim/rtl/serdes/backend/runs/RUN_2026-01-28_17-21-54/tmp/28b63492a07e45288916ff872baad2ed.bb.v"
+lint_off -rule UNUSEDSIGNAL -file "/home/kevinlim/rtl/serdes/backend/runs/RUN_2026-01-28_17-21-54/tmp/28b63492a07e45288916ff872baad2ed.bb.v"

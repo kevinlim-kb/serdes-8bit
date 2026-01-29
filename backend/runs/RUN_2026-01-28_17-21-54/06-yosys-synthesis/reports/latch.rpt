@@ -1,0 +1,6 @@
+
+21. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `\serdes_controller.\q_next' from process `\serdes_controller.$proc$/home/kevinlim/rtl/serdes/rtl_simulation/serdes_controller.v:36$5'.
+No latch inferred for signal `\serdes_controller.\counter_next' from process `\serdes_controller.$proc$/home/kevinlim/rtl/serdes/rtl_simulation/serdes_controller.v:36$5'.
+No latch inferred for signal `\latch_8bit.\bus_net0' from process `\latch_8bit.$proc$/home/kevinlim/rtl/serdes/rtl_simulation/latch_8bit.v:9$24'.
+Latch inferred for signal `\latch_8bit.\data_8b_out' from process `\latch_8bit.$proc$/home/kevinlim/rtl/serdes/rtl_simulation/latch_8bit.v:9$24': $auto$proc_dlatch.cc:433:proc_dlatch$189

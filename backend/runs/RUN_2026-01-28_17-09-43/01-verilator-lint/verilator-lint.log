@@ -1,0 +1,22 @@
+%Warning-UNUSEDSIGNAL: /home/kevinlim/rtl/serdes/rtl_simulation/serdes_8bit.v:13:29: Signal is not driven, nor used: 'par_in'
+                                                                                   : ... note: In instance 'serdes_8bit'
+   13 |     wire            ser_en, par_in, load_en, par_en, ser_out, sipo_en;
+      |                             ^~~~~~
+                       ... For warning description see https://verilator.org/warn/UNUSEDSIGNAL?v=5.018
+                       ... Use "/* verilator lint_off UNUSEDSIGNAL */" and lint_on around source to disable this message.
+%Warning-COMBDLY: /home/kevinlim/rtl/serdes/rtl_simulation/latch_8bit.v:14:29: Non-blocking assignment '<=' in combinational logic process
+                                                                             : ... This will be executed as a blocking assignment '='!
+   14 |                 data_8b_out <= data_8b_in;
+      |                             ^~
+                  *** See https://verilator.org/warn/COMBDLY before disabling this,
+                  else you may end up with different sim results.
+%Warning-BLKSEQ: /home/kevinlim/rtl/serdes/rtl_simulation/serdes_controller.v:29:26: Blocking assignment '=' in sequential logic process
+                                                                                   : ... Suggest using delayed assignment '<='
+   29 |             counter_next = 4'd10;
+      |                          ^
+%Warning-UNOPTFLAT: /home/kevinlim/rtl/serdes/rtl_simulation/serdes_8bit.v:11:27: Signal unoptimizable: Circular combinational logic: 'serdes_8bit.data_8b_out'
+   11 |     wire            [7:0] data_8b_out;
+      |                           ^~~~~~~~~~~
+                    /home/kevinlim/rtl/serdes/rtl_simulation/serdes_8bit.v:11:27:      Example path: serdes_8bit.data_8b_out
+                    /home/kevinlim/rtl/serdes/rtl_simulation/latch_8bit.v:8:5:      Example path: ALWAYS
+                    /home/kevinlim/rtl/serdes/rtl_simulation/serdes_8bit.v:11:27:      Example path: serdes_8bit.data_8b_out

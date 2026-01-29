@@ -1,0 +1,6 @@
+%Warning-UNUSEDSIGNAL: /home/kevinlim/rtl/serdes/rtl_simulation/serdes_8bit.v:13:29: Signal is not driven, nor used: 'par_in'
+                                                                                   : ... note: In instance 'serdes_8bit'
+   13 |     wire            ser_en, par_in, load_en, par_en, ser_out, sipo_en;
+      |                             ^~~~~~
+                       ... For warning description see https://verilator.org/warn/UNUSEDSIGNAL?v=5.018
+                       ... Use "/* verilator lint_off UNUSEDSIGNAL */" and lint_on around source to disable this message.

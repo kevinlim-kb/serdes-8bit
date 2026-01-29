@@ -1,0 +1,14 @@
+Subprocess had a non-zero exit.
+Last 10 line(s):
+Storing AST representation for module `$abstract\piso_10bit'.
+Successfully finished Verilog frontend.
+
+6. Executing Verilog-2005 frontend: /home/kevinlim/rtl/serdes/rtl_simulation/serdes_8bit.v
+Parsing SystemVerilog input from `/home/kevinlim/rtl/serdes/rtl_simulation/serdes_8bit.v' to AST representation.
+Storing AST representation for module `$abstract\serdes_8bit'.
+Successfully finished Verilog frontend.
+
+7. Executing Verilog-2005 frontend: /home/kevinlim/rtl/serdes/rtl_simulation/serdes_controller.v
+/home/kevinlim/rtl/serdes/rtl_simulation/serdes_controller.v:37: ERROR: syntax error, unexpected '@'
+
+Full log file: 'runs/RUN_2026-01-28_17-09-18/05-yosys-jsonheader/yosys-jsonheader.log'

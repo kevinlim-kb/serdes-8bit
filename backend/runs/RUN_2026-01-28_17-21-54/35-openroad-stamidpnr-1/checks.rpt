@@ -1,0 +1,115 @@
+
+===========================================================================
+report_checks -unconstrained
+===========================================================================
+======================= nom_tt_025C_1v80 Corner ===================================
+
+Startpoint: _435_ (rising edge-triggered flip-flop clocked by clk)
+Endpoint: bus_free_flag (output port clocked by clk)
+Path Group: clk
+Path Type: max
+
+Fanout         Cap        Slew       Delay        Time   Description
+---------------------------------------------------------------------------------------------
+                                  0.000000    0.000000   clock clk (rise edge)
+                                  0.000000    0.000000   clock source latency
+     1    0.014009    0.069007    0.046965    0.046965 ^ clk (in)
+                                                         clk (net)
+                      0.069010    0.000000    0.046965 ^ clkbuf_0_clk/A (sky130_fd_sc_hd__clkbuf_16)
+     8    0.072321    0.089559    0.174848    0.221813 ^ clkbuf_0_clk/X (sky130_fd_sc_hd__clkbuf_16)
+                                                         clknet_0_clk (net)
+                      0.089559    0.000364    0.222176 ^ clkbuf_3_0__f_clk/A (sky130_fd_sc_hd__clkbuf_16)
+     8    0.027797    0.049224    0.149262    0.371439 ^ clkbuf_3_0__f_clk/X (sky130_fd_sc_hd__clkbuf_16)
+                                                         clknet_3_0__leaf_clk (net)
+                      0.049224    0.000085    0.371524 ^ _435_/CLK (sky130_fd_sc_hd__dfxtp_1)
+     3    0.007074    0.079520    0.329614    0.701138 ^ _435_/Q (sky130_fd_sc_hd__dfxtp_1)
+                                                         net11 (net)
+                      0.079520    0.000011    0.701149 ^ output11/A (sky130_fd_sc_hd__buf_2)
+     1    0.034110    0.169499    0.210670    0.911819 ^ output11/X (sky130_fd_sc_hd__buf_2)
+                                                         bus_free_flag (net)
+                      0.169499    0.000111    0.911930 ^ bus_free_flag (out)
+                                              0.911930   data arrival time
+
+                                 10.000000   10.000000   clock clk (rise edge)
+                                  0.000000   10.000000   clock network delay (propagated)
+                                 -0.250000    9.750000   clock uncertainty
+                                  0.000000    9.750000   clock reconvergence pessimism
+                                 -2.000000    7.750000   output external delay
+                                              7.750000   data required time
+---------------------------------------------------------------------------------------------
+                                              7.750000   data required time
+                                             -0.911930   data arrival time
+---------------------------------------------------------------------------------------------
+                                              6.838070   slack (MET)
+
+
+
+
+===========================================================================
+report_checks --slack_max -0.01
+============================================================================
+======================= nom_tt_025C_1v80 Corner ===================================
+
+No paths found.
+
+
+===========================================================================
+ report_check_types -max_slew -max_cap -max_fanout -violators
+============================================================================
+======================= nom_tt_025C_1v80 Corner ===================================
+
+max fanout
+
+Pin                                   Limit Fanout  Slack
+---------------------------------------------------------
+clkbuf_3_2__f_clk/X                      10     12     -2 (VIOLATED)
+clkbuf_3_3__f_clk/X                      10     12     -2 (VIOLATED)
+clkbuf_3_1__f_clk/X                      10     11        (VIOLATED)
+clkbuf_3_5__f_clk/X                      10     11        (VIOLATED)
+clkbuf_3_6__f_clk/X                      10     11        (VIOLATED)
+
+
+
+===========================================================================
+report_parasitic_annotation -report_unannotated
+============================================================================
+Found 7 unannotated drivers.
+ clkload0/Y
+ clkload1/X
+ clkload2/X
+ clkload3/Y
+ clkload4/X
+ clkload5/X
+ clkload6/Y
+Found 0 partially unannotated drivers.
+
+===========================================================================
+max slew violation count 0
+Writing metric design__max_slew_violation__count__corner:nom_tt_025C_1v80: 0
+max fanout violation count 5
+Writing metric design__max_fanout_violation__count__corner:nom_tt_025C_1v80: 5
+max cap violation count 0
+Writing metric design__max_cap_violation__count__corner:nom_tt_025C_1v80: 0
+============================================================================
+
+===========================================================================
+check_setup -verbose -unconstrained_endpoints -multiple_clock -no_clock -no_input_delay -loops -generated_clocks
+===========================================================================
+Warning: There are 8 unclocked register/latch pins.
+  _461_/GATE_N
+  _462_/GATE_N
+  _463_/GATE_N
+  _464_/GATE_N
+  _465_/GATE_N
+  _466_/GATE_N
+  _467_/GATE_N
+  _468_/GATE_N
+Warning: There are 8 unconstrained endpoints.
+  _461_/D
+  _462_/D
+  _463_/D
+  _464_/D
+  _465_/D
+  _466_/D
+  _467_/D
+  _468_/D

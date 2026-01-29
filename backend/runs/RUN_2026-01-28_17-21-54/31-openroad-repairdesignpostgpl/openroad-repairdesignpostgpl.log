@@ -1,0 +1,89 @@
+Reading timing models for corner nom_tt_025C_1v80…
+Reading timing library for the 'nom_tt_025C_1v80' corner at '/home/kevinlim/.ciel/ciel/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib'…
+Reading timing models for corner nom_ff_n40C_1v95…
+Reading timing library for the 'nom_ff_n40C_1v95' corner at '/home/kevinlim/.ciel/ciel/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ff_n40C_1v95.lib'…
+Reading timing models for corner nom_ss_100C_1v60…
+Reading timing library for the 'nom_ss_100C_1v60' corner at '/home/kevinlim/.ciel/ciel/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ss_100C_1v60.lib'…
+Reading OpenROAD database at '/home/kevinlim/rtl/serdes/backend/runs/RUN_2026-01-28_17-21-54/27-openroad-globalplacement/serdes_8bit.odb'…
+Reading design constraints file at '/nix/store/dygnx4pddrv785rmrg7jb5gks9z6hrx7-python3-3.11.9-env/lib/python3.11/site-packages/librelane/scripts/base.sdc'…
+[INFO] Using clock clk…
+[INFO] Setting output delay to: 2
+[INFO] Setting input delay to: 2
+[INFO] Setting load to: 0.033442
+[INFO] Setting clock uncertainty to: 0.25
+[INFO] Setting clock transition to: 0.1499999999999999944488848768742172978818416595458984375
+[INFO] Setting timing derate to: 5%
+[INFO] Setting RC values…
+[INFO RSZ-0027] Inserted 10 input buffers.
+[INFO RSZ-0028] Inserted 9 output buffers.
+[INFO RSZ-0058] Using max wire length 6335um.
+Iteration | Resized | Buffers | Nets repaired | Remaining
+---------------------------------------------------------
+        0 |       0 |       0 |             0 |       323
+       10 |       8 |       0 |             0 |       313
+       20 |      18 |       0 |             0 |       303
+       30 |      27 |       0 |             0 |       293
+       40 |      37 |       0 |             0 |       283
+       50 |      47 |       0 |             0 |       273
+       60 |      56 |       0 |             0 |       263
+       70 |      65 |       0 |             0 |       253
+       80 |      74 |       0 |             0 |       243
+       90 |      76 |       0 |             0 |       233
+      100 |      86 |       0 |             0 |       223
+      110 |      88 |       0 |             0 |       213
+      120 |      88 |       0 |             0 |       203
+      130 |      97 |       0 |             0 |       193
+      140 |     107 |       0 |             0 |       183
+      150 |     111 |       0 |             0 |       173
+      160 |     115 |       0 |             0 |       163
+      170 |     117 |       0 |             0 |       153
+      180 |     125 |       0 |             0 |       143
+      190 |     135 |       0 |             0 |       133
+      200 |     144 |       0 |             0 |       123
+      210 |     153 |       2 |             2 |       113
+      220 |     163 |       2 |             2 |       103
+      230 |     177 |       7 |             6 |        93
+      240 |     187 |       7 |             6 |        83
+      250 |     197 |       7 |             6 |        73
+      260 |     207 |       7 |             6 |        63
+      270 |     218 |       8 |             7 |        53
+      280 |     228 |       8 |             7 |        43
+      290 |     238 |       8 |             7 |        33
+      300 |     248 |       8 |             7 |        23
+      310 |     257 |       8 |             7 |        13
+      320 |     264 |      12 |             8 |         3
+    final |     264 |      12 |             8 |         0
+---------------------------------------------------------
+[INFO RSZ-0035] Found 8 fanout violations.
+[INFO RSZ-0038] Inserted 12 buffers in 8 nets.
+[INFO RSZ-0039] Resized 264 instances.
+Placement Analysis
+---------------------------------
+total displacement        809.4 u
+average displacement        1.7 u
+max displacement           10.2 u
+original HPWL            3721.7 u
+legalized HPWL           4464.2 u
+delta HPWL                   20 %
+
+[INFO DPL-0020] Mirrored 91 instances
+[INFO DPL-0021] HPWL before            4464.2 u
+[INFO DPL-0022] HPWL after             4301.6 u
+[INFO DPL-0023] HPWL delta               -3.6 %
+[INFO] Setting RC values…
+Setting global connections for newly added cells…
+[INFO] Setting global connections...
+Updating metrics…
+Cell type report:                       Count       Area
+  Fill cell                                62     232.72
+  Tap cell                                 99     123.87
+  Timing Repair Buffer                     31     147.64
+  Inverter                                 10      37.54
+  Sequential cell                          85    1669.10
+  Multi-Input combinational cell          198    1582.77
+  Total                                   485    3793.64
+Writing OpenROAD database to '/home/kevinlim/rtl/serdes/backend/runs/RUN_2026-01-28_17-21-54/31-openroad-repairdesignpostgpl/serdes_8bit.odb'…
+Writing netlist to '/home/kevinlim/rtl/serdes/backend/runs/RUN_2026-01-28_17-21-54/31-openroad-repairdesignpostgpl/serdes_8bit.nl.v'…
+Writing powered netlist to '/home/kevinlim/rtl/serdes/backend/runs/RUN_2026-01-28_17-21-54/31-openroad-repairdesignpostgpl/serdes_8bit.pnl.v'…
+Writing layout to '/home/kevinlim/rtl/serdes/backend/runs/RUN_2026-01-28_17-21-54/31-openroad-repairdesignpostgpl/serdes_8bit.def'…
+Writing timing constraints to '/home/kevinlim/rtl/serdes/backend/runs/RUN_2026-01-28_17-21-54/31-openroad-repairdesignpostgpl/serdes_8bit.sdc'…
