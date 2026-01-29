@@ -1,0 +1,72 @@
+`timescale 1ns/1ps
+
+module tb;
+    reg             clk, rst_n, data_en;
+    reg [7:0]       data_8bit_in;
+    wire [7:0]      data_8bit_out;
+    wire            bus_free_flag;
+    integer         i;
+
+    serdes_8bit DUT (
+        .clk(clk),
+        .rst_n(rst_n),
+        .data_8bit_in(data_8bit_in),
+        .data_en(data_en),
+        .data_8bit_out(data_8bit_out),
+        .bus_free_flag(bus_free_flag)
+    );
+
+    //-------------------------
+    // clock generation
+    //-------------------------
+    initial clk = 0;
+    always #5 clk = ~clk;   // 100 MHz clock
+
+    // -----------------------------
+    // Reset generation (synchronous to clk)
+    // -----------------------------
+    initial begin
+        rst_n = 1;            
+        #5 rst_n = 0;             
+        #5 rst_n = 1;
+    end
+
+    //-------------------------
+    // waveform dump
+    //-------------------------
+    initial begin
+        $dumpfile("dump.vcd");
+        $dumpvars(0,tb);    // dump tb + DUT hierarchy
+    end
+
+    //-------------------------
+    // Input vector
+    //-------------------------
+    initial begin
+        data_en = 0;
+        data_8bit_in = 0;
+        @(posedge rst_n);   // wait until reset is released
+
+        i = 0;
+        while (i < 100) begin
+            @(posedge clk);  // advance simulation
+            if (bus_free_flag) begin
+                data_en <= 1;
+                data_8bit_in <= $urandom;
+                @(posedge clk);
+                data_en <= 0;
+                @(posedge clk);
+                data_8bit_in <= 0;
+                i = i + 1;   // update loop counter
+                // If bus free, TX send data
+                $display("Cycle %0t: bus empty, send data = %d, sending ...", $time, data_8bit_in);
+            end else begin
+                // If bus not free, just wait another cycle
+                $display("Cycle %0t: bus busy, waiting...", $time);
+            end
+        end
+
+        $finish;
+    end
+
+endmodule
